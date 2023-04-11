@@ -55,6 +55,36 @@
 #helpPage{
 	background-color: #219ebc;
 }
+#avoidedCO2Widget{
+	background-color: #8ecae6;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+#moneySavedWidget{
+	background-color: #8ecae6;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+#totalProduced{
+	background-color: #8ecae6;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+#predictedProductionWidget{
+	background-color: #8ecae6;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+#predictedSavingsWidget{
+	background-color: #8ecae6;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+#statGraphSettingsWidet{
+	background-color: #8ecae6;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -543,7 +573,7 @@
           <item>
            <widget class="QStackedWidget" name="mainContent">
             <property name="currentIndex">
-             <number>2</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="homePage">
              <widget class="QLabel" name="label_4">
@@ -564,97 +594,143 @@
                <rect>
                 <x>20</x>
                 <y>30</y>
-                <width>621</width>
-                <height>391</height>
+                <width>620</width>
+                <height>380</height>
                </rect>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_11">
-               <item alignment="Qt::AlignHCenter">
-                <widget class="QLabel" name="label_7">
-                 <property name="text">
-                  <string>Production in last 24 hours</string>
+               <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                <widget class="QWidget" name="graphWidgetName" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>200</width>
+                   <height>20</height>
+                  </size>
                  </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>150</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_8">
+                  <item>
+                   <widget class="QLabel" name="label_10">
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                </item>
                <item>
-                <widget class="QGraphicsView" name="graphicsView"/>
+                <widget class="QGraphicsView" name="graphicsView">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>100</height>
+                  </size>
+                 </property>
+                </widget>
                </item>
               </layout>
              </widget>
-             <widget class="QWidget" name="totalProduced" native="true">
+             <widget class="QWidget" name="dataWidget" native="true">
               <property name="geometry">
                <rect>
                 <x>20</x>
-                <y>440</y>
-                <width>170</width>
-                <height>56</height>
+                <y>430</y>
+                <width>621</width>
+                <height>74</height>
                </rect>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_10">
+              <layout class="QHBoxLayout" name="horizontalLayout_9">
+               <property name="spacing">
+                <number>30</number>
+               </property>
+               <property name="leftMargin">
+                <number>9</number>
+               </property>
                <item>
-                <widget class="QLabel" name="totalProducedLabel">
-                 <property name="text">
-                  <string>Total Produced Energy Today</string>
-                 </property>
+                <widget class="QWidget" name="totalProduced" native="true">
+                 <layout class="QVBoxLayout" name="verticalLayout_10">
+                  <item>
+                   <widget class="QLabel" name="totalProducedLabel">
+                    <property name="text">
+                     <string>Total Produced Energy Today</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="totalProducedValue">
+                    <property name="text">
+                     <string>10kWh</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="totalProducedValue">
-                 <property name="text">
-                  <string>10kWh</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-             <widget class="QWidget" name="moneySavedWidget" native="true">
-              <property name="geometry">
-               <rect>
-                <x>240</x>
-                <y>440</y>
-                <width>121</width>
-                <height>56</height>
-               </rect>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_9">
-               <item>
-                <widget class="QLabel" name="moneySavedValue">
-                 <property name="text">
-                  <string>Money saved today</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_9">
-                 <property name="text">
-                  <string>50 PLN</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-             <widget class="QWidget" name="avoidedCO2Widget" native="true">
-              <property name="geometry">
-               <rect>
-                <x>460</x>
-                <y>440</y>
-                <width>122</width>
-                <height>56</height>
-               </rect>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_6">
-               <item>
-                <widget class="QLabel" name="avoidedCO2Label">
-                 <property name="text">
-                  <string>CO2 Avoided Today</string>
-                 </property>
+                <widget class="QWidget" name="moneySavedWidget" native="true">
+                 <layout class="QVBoxLayout" name="verticalLayout_9">
+                  <item>
+                   <widget class="QLabel" name="moneySavedTodayLabel">
+                    <property name="text">
+                     <string>Money saved today</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="moneySavedValue">
+                    <property name="text">
+                     <string>50 PLN</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                </item>
                <item>
-                <widget class="QLabel" name="avoidedCO2Value">
-                 <property name="text">
-                  <string>200kg</string>
-                 </property>
+                <widget class="QWidget" name="avoidedCO2Widget" native="true">
+                 <layout class="QVBoxLayout" name="verticalLayout_6">
+                  <item>
+                   <widget class="QLabel" name="avoidedCO2Label">
+                    <property name="text">
+                     <string>CO2 Avoided Today</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="avoidedCO2Value">
+                    <property name="text">
+                     <string>200kg</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                </item>
               </layout>
@@ -677,10 +753,10 @@
              <widget class="QWidget" name="statGraphWidget" native="true">
               <property name="geometry">
                <rect>
-                <x>50</x>
-                <y>70</y>
-                <width>561</width>
-                <height>361</height>
+                <x>20</x>
+                <y>30</y>
+                <width>620</width>
+                <height>380</height>
                </rect>
               </property>
               <property name="sizePolicy">
@@ -690,16 +766,22 @@
                </sizepolicy>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_12">
-               <item>
+               <item alignment="Qt::AlignRight|Qt::AlignTop">
                 <widget class="QWidget" name="statGraphSettingsWidet" native="true">
                  <property name="minimumSize">
                   <size>
-                   <width>0</width>
+                   <width>280</width>
                    <height>30</height>
                   </size>
                  </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>400</width>
+                   <height>20</height>
+                  </size>
+                 </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_5">
-                  <item>
+                  <item alignment="Qt::AlignTop">
                    <widget class="QLabel" name="label_8">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
@@ -707,18 +789,39 @@
                       <verstretch>0</verstretch>
                      </sizepolicy>
                     </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>120</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
                     <property name="text">
-                     <string>Choose Range</string>
+                     <string>Choose Range:</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
                     </property>
                    </widget>
                   </item>
-                  <item>
+                  <item alignment="Qt::AlignTop">
                    <widget class="QComboBox" name="comboBox">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                       <horstretch>0</horstretch>
                       <verstretch>0</verstretch>
                      </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>170</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>170</width>
+                      <height>16777215</height>
+                     </size>
                     </property>
                     <item>
                      <property name="text">
@@ -765,78 +868,122 @@
                <string>Predictions</string>
               </property>
              </widget>
-             <widget class="QWidget" name="predictionsWidget" native="true">
+             <widget class="QWidget" name="graphWidget_2" native="true">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
               <property name="geometry">
                <rect>
-                <x>40</x>
-                <y>40</y>
-                <width>601</width>
-                <height>511</height>
+                <x>20</x>
+                <y>30</y>
+                <width>620</width>
+                <height>380</height>
                </rect>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_13">
-               <item>
-                <widget class="QWidget" name="predictionsGraphWidget" native="true">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QWidget" name="graphWidgetName_2" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>200</width>
+                   <height>20</height>
+                  </size>
                  </property>
-                 <layout class="QHBoxLayout" name="horizontalLayout_6">
-                  <item>
-                   <widget class="QGraphicsView" name="graphicsView_3"/>
+                 <property name="maximumSize">
+                  <size>
+                   <width>150</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_10">
+                  <item alignment="Qt::AlignHCenter">
+                   <widget class="QLabel" name="label_11">
+                    <property name="text">
+                     <string>TextLabel</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
                   </item>
                  </layout>
                 </widget>
                </item>
-               <item alignment="Qt::AlignBottom">
-                <widget class="QWidget" name="predictionsDataWidget" native="true">
+               <item>
+                <widget class="QGraphicsView" name="graphicsView_3">
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
-                   <height>70</height>
+                   <height>100</height>
                   </size>
                  </property>
-                 <layout class="QHBoxLayout" name="horizontalLayout_7">
-                  <item>
-                   <widget class="QWidget" name="predictedProductionWidget" native="true">
-                    <layout class="QVBoxLayout" name="verticalLayout_14">
-                     <item alignment="Qt::AlignHCenter">
-                      <widget class="QLabel" name="predictedProductionLabel">
-                       <property name="text">
-                        <string>Predicted Production:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item alignment="Qt::AlignHCenter">
-                      <widget class="QLabel" name="predictedProductionValue">
-                       <property name="text">
-                        <string>10 kWh</string>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="predictionsDataWidget" native="true">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>430</y>
+                <width>620</width>
+                <height>74</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>70</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_7">
+               <item>
+                <widget class="QWidget" name="predictedProductionWidget" native="true">
+                 <property name="maximumSize">
+                  <size>
+                   <width>200</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_14">
+                  <item alignment="Qt::AlignHCenter">
+                   <widget class="QLabel" name="predictedProductionLabel">
+                    <property name="text">
+                     <string>Predicted Production:</string>
+                    </property>
                    </widget>
                   </item>
-                  <item>
-                   <widget class="QWidget" name="predictedSavingsWidget" native="true">
-                    <layout class="QVBoxLayout" name="verticalLayout_15">
-                     <item alignment="Qt::AlignHCenter">
-                      <widget class="QLabel" name="predictedSavingsLabel">
-                       <property name="text">
-                        <string>Predicted Savings:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item alignment="Qt::AlignHCenter">
-                      <widget class="QLabel" name="predictedSavingsValue">
-                       <property name="text">
-                        <string>10 PLN</string>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
+                  <item alignment="Qt::AlignHCenter">
+                   <widget class="QLabel" name="predictedProductionValue">
+                    <property name="text">
+                     <string>10 kWh</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QWidget" name="predictedSavingsWidget" native="true">
+                 <property name="maximumSize">
+                  <size>
+                   <width>200</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_15">
+                  <item alignment="Qt::AlignHCenter">
+                   <widget class="QLabel" name="predictedSavingsLabel">
+                    <property name="text">
+                     <string>Predicted Savings:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item alignment="Qt::AlignHCenter">
+                   <widget class="QLabel" name="predictedSavingsValue">
+                    <property name="text">
+                     <string>10 PLN</string>
+                    </property>
                    </widget>
                   </item>
                  </layout>

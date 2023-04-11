@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Project1ceEVrj.ui'
+## Form generated from reading UI file 'Project1ipMOkP.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -66,6 +66,37 @@ class Ui_MainWindow(object):
 "}\n"
 "#helpPage{\n"
 "	background-color: #219ebc;\n"
+"}\n"
+"#avoidedCO2Widget{\n"
+"	background-color: #8ecae6;\n"
+"	border-top-left-radius: 10px;\n"
+"	border-bottom-right-radius: 10px;\n"
+"}\n"
+"#moneySaved"
+                        "Widget{\n"
+"	background-color: #8ecae6;\n"
+"	border-top-left-radius: 10px;\n"
+"	border-bottom-right-radius: 10px;\n"
+"}\n"
+"#totalProduced{\n"
+"	background-color: #8ecae6;\n"
+"	border-top-left-radius: 10px;\n"
+"	border-bottom-right-radius: 10px;\n"
+"}\n"
+"#predictedProductionWidget{\n"
+"	background-color: #8ecae6;\n"
+"	border-top-left-radius: 10px;\n"
+"	border-bottom-right-radius: 10px;\n"
+"}\n"
+"#predictedSavingsWidget{\n"
+"	background-color: #8ecae6;\n"
+"	border-top-left-radius: 10px;\n"
+"	border-bottom-right-radius: 10px;\n"
+"}\n"
+"#statGraphSettingsWidet{\n"
+"	background-color: #8ecae6;\n"
+"	border-top-left-radius: 10px;\n"
+"	border-bottom-right-radius: 10px;\n"
 "}\n"
 "")
         self.centralwidget = QWidget(MainWindow)
@@ -302,63 +333,93 @@ class Ui_MainWindow(object):
         self.label_4.setGeometry(QRect(300, 560, 49, 16))
         self.graphWidget = QWidget(self.homePage)
         self.graphWidget.setObjectName(u"graphWidget")
-        self.graphWidget.setGeometry(QRect(20, 30, 621, 391))
+        self.graphWidget.setGeometry(QRect(20, 30, 620, 380))
         self.verticalLayout_11 = QVBoxLayout(self.graphWidget)
         self.verticalLayout_11.setObjectName(u"verticalLayout_11")
-        self.label_7 = QLabel(self.graphWidget)
-        self.label_7.setObjectName(u"label_7")
+        self.graphWidgetName = QWidget(self.graphWidget)
+        self.graphWidgetName.setObjectName(u"graphWidgetName")
+        self.graphWidgetName.setMinimumSize(QSize(200, 20))
+        self.graphWidgetName.setMaximumSize(QSize(150, 30))
+        self.horizontalLayout_8 = QHBoxLayout(self.graphWidgetName)
+        self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
+        self.label_10 = QLabel(self.graphWidgetName)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_11.addWidget(self.label_7, 0, Qt.AlignHCenter)
+        self.horizontalLayout_8.addWidget(self.label_10)
+
+
+        self.verticalLayout_11.addWidget(self.graphWidgetName, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
         self.graphicsView = QGraphicsView(self.graphWidget)
         self.graphicsView.setObjectName(u"graphicsView")
+        self.graphicsView.setMinimumSize(QSize(0, 100))
 
         self.verticalLayout_11.addWidget(self.graphicsView)
 
-        self.totalProduced = QWidget(self.homePage)
+        self.dataWidget = QWidget(self.homePage)
+        self.dataWidget.setObjectName(u"dataWidget")
+        self.dataWidget.setGeometry(QRect(20, 430, 621, 74))
+        self.horizontalLayout_9 = QHBoxLayout(self.dataWidget)
+        self.horizontalLayout_9.setSpacing(30)
+        self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
+        self.horizontalLayout_9.setContentsMargins(9, -1, -1, -1)
+        self.totalProduced = QWidget(self.dataWidget)
         self.totalProduced.setObjectName(u"totalProduced")
-        self.totalProduced.setGeometry(QRect(20, 440, 170, 56))
         self.verticalLayout_10 = QVBoxLayout(self.totalProduced)
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
         self.totalProducedLabel = QLabel(self.totalProduced)
         self.totalProducedLabel.setObjectName(u"totalProducedLabel")
+        self.totalProducedLabel.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_10.addWidget(self.totalProducedLabel)
 
         self.totalProducedValue = QLabel(self.totalProduced)
         self.totalProducedValue.setObjectName(u"totalProducedValue")
+        self.totalProducedValue.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_10.addWidget(self.totalProducedValue)
 
-        self.moneySavedWidget = QWidget(self.homePage)
+
+        self.horizontalLayout_9.addWidget(self.totalProduced)
+
+        self.moneySavedWidget = QWidget(self.dataWidget)
         self.moneySavedWidget.setObjectName(u"moneySavedWidget")
-        self.moneySavedWidget.setGeometry(QRect(240, 440, 121, 56))
         self.verticalLayout_9 = QVBoxLayout(self.moneySavedWidget)
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
+        self.moneySavedTodayLabel = QLabel(self.moneySavedWidget)
+        self.moneySavedTodayLabel.setObjectName(u"moneySavedTodayLabel")
+        self.moneySavedTodayLabel.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_9.addWidget(self.moneySavedTodayLabel)
+
         self.moneySavedValue = QLabel(self.moneySavedWidget)
         self.moneySavedValue.setObjectName(u"moneySavedValue")
+        self.moneySavedValue.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_9.addWidget(self.moneySavedValue)
 
-        self.label_9 = QLabel(self.moneySavedWidget)
-        self.label_9.setObjectName(u"label_9")
 
-        self.verticalLayout_9.addWidget(self.label_9)
+        self.horizontalLayout_9.addWidget(self.moneySavedWidget)
 
-        self.avoidedCO2Widget = QWidget(self.homePage)
+        self.avoidedCO2Widget = QWidget(self.dataWidget)
         self.avoidedCO2Widget.setObjectName(u"avoidedCO2Widget")
-        self.avoidedCO2Widget.setGeometry(QRect(460, 440, 122, 56))
         self.verticalLayout_6 = QVBoxLayout(self.avoidedCO2Widget)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
         self.avoidedCO2Label = QLabel(self.avoidedCO2Widget)
         self.avoidedCO2Label.setObjectName(u"avoidedCO2Label")
+        self.avoidedCO2Label.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_6.addWidget(self.avoidedCO2Label)
 
         self.avoidedCO2Value = QLabel(self.avoidedCO2Widget)
         self.avoidedCO2Value.setObjectName(u"avoidedCO2Value")
+        self.avoidedCO2Value.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_6.addWidget(self.avoidedCO2Value)
+
+
+        self.horizontalLayout_9.addWidget(self.avoidedCO2Widget)
 
         self.mainContent.addWidget(self.homePage)
         self.statisticsPage = QWidget()
@@ -368,7 +429,7 @@ class Ui_MainWindow(object):
         self.label_5.setGeometry(QRect(280, 580, 121, 31))
         self.statGraphWidget = QWidget(self.statisticsPage)
         self.statGraphWidget.setObjectName(u"statGraphWidget")
-        self.statGraphWidget.setGeometry(QRect(50, 70, 561, 361))
+        self.statGraphWidget.setGeometry(QRect(20, 30, 620, 380))
         sizePolicy3 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         sizePolicy3.setHorizontalStretch(0)
         sizePolicy3.setVerticalStretch(0)
@@ -378,7 +439,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_12.setObjectName(u"verticalLayout_12")
         self.statGraphSettingsWidet = QWidget(self.statGraphWidget)
         self.statGraphSettingsWidet.setObjectName(u"statGraphSettingsWidet")
-        self.statGraphSettingsWidet.setMinimumSize(QSize(0, 30))
+        self.statGraphSettingsWidet.setMinimumSize(QSize(280, 30))
+        self.statGraphSettingsWidet.setMaximumSize(QSize(400, 20))
         self.horizontalLayout_5 = QHBoxLayout(self.statGraphSettingsWidet)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
         self.label_8 = QLabel(self.statGraphSettingsWidet)
@@ -388,8 +450,10 @@ class Ui_MainWindow(object):
         sizePolicy4.setVerticalStretch(0)
         sizePolicy4.setHeightForWidth(self.label_8.sizePolicy().hasHeightForWidth())
         self.label_8.setSizePolicy(sizePolicy4)
+        self.label_8.setMaximumSize(QSize(120, 16777215))
+        self.label_8.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_5.addWidget(self.label_8)
+        self.horizontalLayout_5.addWidget(self.label_8, 0, Qt.AlignTop)
 
         self.comboBox = QComboBox(self.statGraphSettingsWidet)
         self.comboBox.addItem("")
@@ -402,11 +466,13 @@ class Ui_MainWindow(object):
         sizePolicy5.setVerticalStretch(0)
         sizePolicy5.setHeightForWidth(self.comboBox.sizePolicy().hasHeightForWidth())
         self.comboBox.setSizePolicy(sizePolicy5)
+        self.comboBox.setMinimumSize(QSize(170, 0))
+        self.comboBox.setMaximumSize(QSize(170, 16777215))
 
-        self.horizontalLayout_5.addWidget(self.comboBox)
+        self.horizontalLayout_5.addWidget(self.comboBox, 0, Qt.AlignTop)
 
 
-        self.verticalLayout_12.addWidget(self.statGraphSettingsWidet)
+        self.verticalLayout_12.addWidget(self.statGraphSettingsWidet, 0, Qt.AlignRight|Qt.AlignTop)
 
         self.graphicsView_2 = QGraphicsView(self.statGraphWidget)
         self.graphicsView_2.setObjectName(u"graphicsView_2")
@@ -419,32 +485,42 @@ class Ui_MainWindow(object):
         self.label_6 = QLabel(self.predictionsPage)
         self.label_6.setObjectName(u"label_6")
         self.label_6.setGeometry(QRect(270, 550, 101, 41))
-        self.predictionsWidget = QWidget(self.predictionsPage)
-        self.predictionsWidget.setObjectName(u"predictionsWidget")
-        self.predictionsWidget.setGeometry(QRect(40, 40, 601, 511))
-        self.verticalLayout_13 = QVBoxLayout(self.predictionsWidget)
+        self.graphWidget_2 = QWidget(self.predictionsPage)
+        self.graphWidget_2.setObjectName(u"graphWidget_2")
+        self.graphWidget_2.setEnabled(True)
+        self.graphWidget_2.setGeometry(QRect(20, 30, 620, 380))
+        self.verticalLayout_13 = QVBoxLayout(self.graphWidget_2)
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
-        self.predictionsGraphWidget = QWidget(self.predictionsWidget)
-        self.predictionsGraphWidget.setObjectName(u"predictionsGraphWidget")
-        sizePolicy2.setHeightForWidth(self.predictionsGraphWidget.sizePolicy().hasHeightForWidth())
-        self.predictionsGraphWidget.setSizePolicy(sizePolicy2)
-        self.horizontalLayout_6 = QHBoxLayout(self.predictionsGraphWidget)
-        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
-        self.graphicsView_3 = QGraphicsView(self.predictionsGraphWidget)
+        self.graphWidgetName_2 = QWidget(self.graphWidget_2)
+        self.graphWidgetName_2.setObjectName(u"graphWidgetName_2")
+        self.graphWidgetName_2.setMinimumSize(QSize(200, 20))
+        self.graphWidgetName_2.setMaximumSize(QSize(150, 30))
+        self.horizontalLayout_10 = QHBoxLayout(self.graphWidgetName_2)
+        self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
+        self.label_11 = QLabel(self.graphWidgetName_2)
+        self.label_11.setObjectName(u"label_11")
+        self.label_11.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_10.addWidget(self.label_11, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_13.addWidget(self.graphWidgetName_2, 0, Qt.AlignHCenter)
+
+        self.graphicsView_3 = QGraphicsView(self.graphWidget_2)
         self.graphicsView_3.setObjectName(u"graphicsView_3")
+        self.graphicsView_3.setMinimumSize(QSize(0, 100))
 
-        self.horizontalLayout_6.addWidget(self.graphicsView_3)
+        self.verticalLayout_13.addWidget(self.graphicsView_3)
 
-
-        self.verticalLayout_13.addWidget(self.predictionsGraphWidget)
-
-        self.predictionsDataWidget = QWidget(self.predictionsWidget)
+        self.predictionsDataWidget = QWidget(self.predictionsPage)
         self.predictionsDataWidget.setObjectName(u"predictionsDataWidget")
+        self.predictionsDataWidget.setGeometry(QRect(20, 430, 620, 74))
         self.predictionsDataWidget.setMinimumSize(QSize(0, 70))
         self.horizontalLayout_7 = QHBoxLayout(self.predictionsDataWidget)
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
         self.predictedProductionWidget = QWidget(self.predictionsDataWidget)
         self.predictedProductionWidget.setObjectName(u"predictedProductionWidget")
+        self.predictedProductionWidget.setMaximumSize(QSize(200, 16777215))
         self.verticalLayout_14 = QVBoxLayout(self.predictedProductionWidget)
         self.verticalLayout_14.setObjectName(u"verticalLayout_14")
         self.predictedProductionLabel = QLabel(self.predictedProductionWidget)
@@ -462,6 +538,7 @@ class Ui_MainWindow(object):
 
         self.predictedSavingsWidget = QWidget(self.predictionsDataWidget)
         self.predictedSavingsWidget.setObjectName(u"predictedSavingsWidget")
+        self.predictedSavingsWidget.setMaximumSize(QSize(200, 16777215))
         self.verticalLayout_15 = QVBoxLayout(self.predictedSavingsWidget)
         self.verticalLayout_15.setObjectName(u"verticalLayout_15")
         self.predictedSavingsLabel = QLabel(self.predictedSavingsWidget)
@@ -477,9 +554,6 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_7.addWidget(self.predictedSavingsWidget)
 
-
-        self.verticalLayout_13.addWidget(self.predictionsDataWidget, 0, Qt.AlignBottom)
-
         self.mainContent.addWidget(self.predictionsPage)
 
         self.verticalLayout_7.addWidget(self.mainContent)
@@ -494,7 +568,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.mainContent.setCurrentIndex(2)
+        self.mainContent.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -533,21 +607,22 @@ class Ui_MainWindow(object):
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Help", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Information", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Home", None))
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Production in last 24 hours", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.totalProducedLabel.setText(QCoreApplication.translate("MainWindow", u"Total Produced Energy Today", None))
         self.totalProducedValue.setText(QCoreApplication.translate("MainWindow", u"10kWh", None))
-        self.moneySavedValue.setText(QCoreApplication.translate("MainWindow", u"Money saved today", None))
-        self.label_9.setText(QCoreApplication.translate("MainWindow", u"50 PLN", None))
+        self.moneySavedTodayLabel.setText(QCoreApplication.translate("MainWindow", u"Money saved today", None))
+        self.moneySavedValue.setText(QCoreApplication.translate("MainWindow", u"50 PLN", None))
         self.avoidedCO2Label.setText(QCoreApplication.translate("MainWindow", u"CO2 Avoided Today", None))
         self.avoidedCO2Value.setText(QCoreApplication.translate("MainWindow", u"200kg", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"statistics", None))
-        self.label_8.setText(QCoreApplication.translate("MainWindow", u"Choose Range", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"Choose Range:", None))
         self.comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Last Day", None))
         self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Last Month", None))
         self.comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Last Year", None))
         self.comboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Lifetime", None))
 
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Predictions", None))
+        self.label_11.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.predictedProductionLabel.setText(QCoreApplication.translate("MainWindow", u"Predicted Production:", None))
         self.predictedProductionValue.setText(QCoreApplication.translate("MainWindow", u"10 kWh", None))
         self.predictedSavingsLabel.setText(QCoreApplication.translate("MainWindow", u"Predicted Savings:", None))
