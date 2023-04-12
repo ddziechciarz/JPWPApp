@@ -52,6 +52,98 @@ def energy_prediction():
     energy = charts_value[9:len(charts_value)]
     return energy
 
+
+def wheather_today(url):
+    response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
+
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    temperature_soup = soup.find("div", class_="temperature").text.split()
+    temperature = ''
+    for x in temperature_soup[0]:
+        if x != '°':
+            temperature += x
+        else:
+            break
+
+    wind_soup = soup.find("div", class_="left").find_all("span")
+    if len(wind_soup) == 4:
+        wind = wind_soup[2].text
+    else:
+        wind = wind_soup[1].text
+
+    cloudiness_soup = soup.find("div", class_="right").find_all("span")
+    cloudiness = cloudiness_soup[2].text
+
+    sun_soup = soup.find("div", class_="sunrise-sunset").find("div", class_="left").find_all("span", class_="text-value")
+    sunrise = sun_soup[0].text
+    sunset = sun_soup[1].text
+    fulldate = datetime.datetime.now()
+    date = fulldate.strftime("%x")
+    time = fulldate.strftime("%X")
+    dane = ['nazwa;wartosc', "Temperatura;"+temperature, "Predkosc wiatru;"+wind, "Zachmurzenie;"+cloudiness, "wschod;"+sunrise, "zachod;"+sunset, "data;"+date, "godzina;"+time]
+    f = open('weather_tod.csv', mode='w')
+    for y in dane:
+        text = y
+        f.write(text+'\n')
+    return cloudiness[0:len(cloudiness)-1]
+    f.close()
+
+
+def wheather_next(url, day):
+    response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
+
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    temperature_soup = soup.find("div", class_="temperature").text.split()
+    temperature = ''
+    for x in temperature_soup[0]:
+        if x != '°':
+            temperature += x
+        else:
+            break
+
+    wind_soup = soup.find("div", class_="left").find_all("span")
+    if len(wind_soup) == 3:
+        wind = wind_soup[1].text
+    else:
+        wind = wind_soup[2].text
+
+    cloudiness_soup = soup.find("div", class_="right").find_all("span")
+    cloudiness = cloudiness_soup[len(cloudiness_soup)-1].text
+
+    sun_soup = soup.find("div", class_="sunrise-sunset").find("div", class_="left").find_all("span", class_="text-value")
+    sunrise = sun_soup[0].text
+    sunset = sun_soup[1].text
+
+    dane = ['nazwa;wartosc', "Temperatura;"+temperature, "Predkosc wiatru;"+wind, "Zachmurzenie;"+cloudiness, "wschod;"+sunrise, "zachod;"+sunset]
+    f = open('weather_day'+day+'.csv', mode='w')
+    for y in dane:
+        text = y
+        f.write(text+'\n')
+    return cloudiness[0:len(cloudiness) - 1]
+    f.close()
+
+def calculator_energy():
+    month_percent = [0.039, 0.051, 0.081, 0.109, 0.114, 0.116, 0.123, 0.119, 0.096, 0.074, 0.045, 0.033]
+    yearly = 1275.6 * 6 * 0.7683
+    today = datetime.datetime.now()
+    month = int(today.strftime("%m"))
+    monthly = yearly * month_percent[month - 1]
+    daily = monthly / 30
+    average = daily / 0.57
+    predictions = []
+    for x in range(1, 9):
+        if x != 1:
+            url = "https://www.accuweather.com/pl/pl/wojnarowa/274421/daily-weather-forecast/274421?day=" + str(x)
+            cloudiness = int(wheather_next(url, str(x))) / 100
+        else:
+            url = "https://www.accuweather.com/pl/pl/wojnarowa/274421/daily-weather-forecast/274421?day=1"
+            cloudiness = int(wheather_today(url)) / 100
+        value = average * (1 - cloudiness)
+        predictions.append(value)
+    return predictions
+
 def charts_today():
     driver = login()
     today = datetime.datetime.now()
@@ -59,7 +151,6 @@ def charts_today():
     day = today.strftime("%d")
     driver.get('https://home.solarman.cn/cpro/epc/plantDetail/showCharts.json?plantId=1623212&type=1&date=2023%2F'+month+'%2F'+day+'&plantTimezoneId=39')
     charts_data = driver.page_source
-    print(charts_data)
     charts_split = charts_data.split('{')
     final_charts = []
     for x in range(3, len(charts_split)-1):
@@ -171,7 +262,7 @@ def charts_month_last():
     return charts
 
 
-print(energy_prediction())
+print(calculator_energy())
 
 #data_charts = charts_today()
 #for ch in range(0, len(data_charts[0])):
