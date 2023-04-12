@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Project1ipMOkP.ui'
+## Form generated from reading UI file 'Project1EkxNtS.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -94,6 +94,16 @@ class Ui_MainWindow(object):
 "	border-bottom-right-radius: 10px;\n"
 "}\n"
 "#statGraphSettingsWidet{\n"
+"	background-color: #8ecae6;\n"
+"	border-top-left-radius: 10px;\n"
+"	border-bottom-right-radius: 10px;\n"
+"}\n"
+"#graphWidgetName{\n"
+"	background-color: #8ecae6;\n"
+"	border-top-left-radius: 10px;\n"
+"	border-bottom-right-radius: 10px;\n"
+"}\n"
+"#graphWidgetName_2{\n"
 "	background-color: #8ecae6;\n"
 "	border-top-left-radius: 10px;\n"
 "	border-bottom-right-radius: 10px;\n"
@@ -342,11 +352,13 @@ class Ui_MainWindow(object):
         self.graphWidgetName.setMaximumSize(QSize(150, 30))
         self.horizontalLayout_8 = QHBoxLayout(self.graphWidgetName)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
+        self.horizontalLayout_8.setContentsMargins(-1, 4, -1, -1)
         self.label_10 = QLabel(self.graphWidgetName)
         self.label_10.setObjectName(u"label_10")
+        self.label_10.setMinimumSize(QSize(0, 20))
         self.label_10.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_8.addWidget(self.label_10)
+        self.horizontalLayout_8.addWidget(self.label_10, 0, Qt.AlignVCenter)
 
 
         self.verticalLayout_11.addWidget(self.graphWidgetName, 0, Qt.AlignHCenter|Qt.AlignVCenter)
@@ -493,15 +505,16 @@ class Ui_MainWindow(object):
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
         self.graphWidgetName_2 = QWidget(self.graphWidget_2)
         self.graphWidgetName_2.setObjectName(u"graphWidgetName_2")
-        self.graphWidgetName_2.setMinimumSize(QSize(200, 20))
-        self.graphWidgetName_2.setMaximumSize(QSize(150, 30))
+        self.graphWidgetName_2.setMinimumSize(QSize(220, 20))
+        self.graphWidgetName_2.setMaximumSize(QSize(200, 30))
         self.horizontalLayout_10 = QHBoxLayout(self.graphWidgetName_2)
         self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
-        self.label_11 = QLabel(self.graphWidgetName_2)
-        self.label_11.setObjectName(u"label_11")
-        self.label_11.setAlignment(Qt.AlignCenter)
+        self.predictedGraphName = QLabel(self.graphWidgetName_2)
+        self.predictedGraphName.setObjectName(u"predictedGraphName")
+        self.predictedGraphName.setMinimumSize(QSize(200, 0))
+        self.predictedGraphName.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_10.addWidget(self.label_11, 0, Qt.AlignHCenter)
+        self.horizontalLayout_10.addWidget(self.predictedGraphName, 0, Qt.AlignHCenter)
 
 
         self.verticalLayout_13.addWidget(self.graphWidgetName_2, 0, Qt.AlignHCenter)
@@ -568,7 +581,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.mainContent.setCurrentIndex(1)
+        self.mainContent.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -607,7 +620,7 @@ class Ui_MainWindow(object):
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Help", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Information", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Home", None))
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_10.setText(QCoreApplication.translate("MainWindow", u"Today's production", None))
         self.totalProducedLabel.setText(QCoreApplication.translate("MainWindow", u"Total Produced Energy Today", None))
         self.totalProducedValue.setText(QCoreApplication.translate("MainWindow", u"10kWh", None))
         self.moneySavedTodayLabel.setText(QCoreApplication.translate("MainWindow", u"Money saved today", None))
@@ -622,7 +635,7 @@ class Ui_MainWindow(object):
         self.comboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Lifetime", None))
 
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Predictions", None))
-        self.label_11.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.predictedGraphName.setText(QCoreApplication.translate("MainWindow", u"Predicted production for next week", None))
         self.predictedProductionLabel.setText(QCoreApplication.translate("MainWindow", u"Predicted Production:", None))
         self.predictedProductionValue.setText(QCoreApplication.translate("MainWindow", u"10 kWh", None))
         self.predictedSavingsLabel.setText(QCoreApplication.translate("MainWindow", u"Predicted Savings:", None))
