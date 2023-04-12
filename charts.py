@@ -171,7 +171,7 @@ def charts_month_last():
     return charts
 
 
-print(energy_prediction())
+#print(energy_prediction())
 
 #data_charts = charts_today()
 #for ch in range(0, len(data_charts[0])):

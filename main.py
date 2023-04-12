@@ -1,7 +1,13 @@
 import os
 import sys
+import PyQt6
+
+from PySide6.QtGui import QPainter
+from pyqtgraph import PlotWidget, plot
+import pyqtgraph as pg
 
 from Project1 import *
+import charts
 
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
@@ -15,10 +21,13 @@ class MainWindow(QMainWindow):
         self.ui.helpButton.clicked.connect(lambda: self.smallButtonClicked(1))
 
         self.ui.homeButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(2))
-        self.ui.statsButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(0))
+        self.ui.statsButton.clicked.connect(lambda: self.statWindowClicked())
         self.ui.predButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(1))
 
         self.ui.menuButton.clicked.connect(lambda: self.ui.centerLeftMenuSubcontainer.setHidden(not self.ui.centerLeftMenuSubcontainer.isHidden()))
+
+
+
 
     def smallButtonClicked(self, index):
         if self.ui.leftMenuContents.currentIndex() == index:
@@ -27,10 +36,20 @@ class MainWindow(QMainWindow):
             self.ui.centerLeftMenuSubcontainer.setHidden(False)
         self.ui.leftMenuContents.setCurrentIndex(index)
 
+    def homeWindowClicked(self):
+        self.ui.mainContent.setCurrentIndex(2)
+        self.ui.homeGraph.plotItem
+
+    def statWindowClicked(self):
+        self.ui.mainContent.setCurrentIndex(0)
+        #self.ui.homeGraph
+
+
 
 
 
 if __name__ == "__main__":
+    #todayCharts = charts.charts_today()
     app = QApplication(sys.argv)
     window = MainWindow()
     window.show()
