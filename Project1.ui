@@ -85,6 +85,16 @@
 	border-top-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
+#graphWidgetName{
+	background-color: #8ecae6;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+#graphWidgetName_2{
+	background-color: #8ecae6;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -573,7 +583,7 @@
           <item>
            <widget class="QStackedWidget" name="mainContent">
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="homePage">
              <widget class="QLabel" name="label_4">
@@ -614,10 +624,19 @@
                   </size>
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_8">
-                  <item>
+                  <property name="topMargin">
+                   <number>4</number>
+                  </property>
+                  <item alignment="Qt::AlignVCenter">
                    <widget class="QLabel" name="label_10">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>20</height>
+                     </size>
+                    </property>
                     <property name="text">
-                     <string>TextLabel</string>
+                     <string>Today's production</string>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
@@ -885,21 +904,27 @@
                 <widget class="QWidget" name="graphWidgetName_2" native="true">
                  <property name="minimumSize">
                   <size>
-                   <width>200</width>
+                   <width>220</width>
                    <height>20</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>150</width>
+                   <width>200</width>
                    <height>30</height>
                   </size>
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_10">
                   <item alignment="Qt::AlignHCenter">
-                   <widget class="QLabel" name="label_11">
+                   <widget class="QLabel" name="predictedGraphName">
+                    <property name="minimumSize">
+                     <size>
+                      <width>200</width>
+                      <height>0</height>
+                     </size>
+                    </property>
                     <property name="text">
-                     <string>TextLabel</string>
+                     <string>Predicted production for next week</string>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
