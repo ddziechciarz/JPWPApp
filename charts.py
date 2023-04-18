@@ -149,7 +149,8 @@ def charts_today():
     today = datetime.datetime.now()
     month = today.strftime("%m")
     day = today.strftime("%d")
-    driver.get('https://home.solarman.cn/cpro/epc/plantDetail/showCharts.json?plantId=1623212&type=1&date=2023%2F'+month+'%2F'+day+'&plantTimezoneId=39')
+    driver.get('https://home.solarman.cn/cpro/epc/plantDetail/showCharts.json?plantId=1623212&type=1&date=2023%2F04%2F11&plantTimezoneId=39')
+    #driver.get('https://home.solarman.cn/cpro/epc/plantDetail/showCharts.json?plantId=1623212&type=1&date=2023%2F'+month+'%2F'+day+'&plantTimezoneId=39')
     charts_data = driver.page_source
     charts_split = charts_data.split('{')
     final_charts = []
@@ -262,7 +263,7 @@ def charts_month_last():
     return charts
 
 
-print(calculator_energy())
+print(charts_today())
 
 #data_charts = charts_today()
 #for ch in range(0, len(data_charts[0])):
