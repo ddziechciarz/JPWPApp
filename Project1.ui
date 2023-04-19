@@ -95,7 +95,26 @@
 	border-top-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
-</string>
+#angleWidget{
+	background-color: #FFBC42;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+#capacityWidget{
+	background-color: #FFBC42;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+#installedDateWidget{
+	background-color: #FFBC42;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+#helpLabelsWidget{
+	background-color: #FFBC42;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -519,39 +538,189 @@
               </widget>
              </widget>
              <widget class="QWidget" name="helpPage">
-              <widget class="QLabel" name="label_3">
+              <widget class="QWidget" name="helpInnerWidget" native="true">
                <property name="geometry">
                 <rect>
-                 <x>70</x>
-                 <y>110</y>
-                 <width>49</width>
-                 <height>16</height>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>180</width>
+                 <height>500</height>
                 </rect>
                </property>
-               <property name="text">
-                <string>Help</string>
+               <property name="minimumSize">
+                <size>
+                 <width>180</width>
+                 <height>500</height>
+                </size>
                </property>
+               <property name="maximumSize">
+                <size>
+                 <width>180</width>
+                 <height>500</height>
+                </size>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_20">
+                <item alignment="Qt::AlignTop">
+                 <widget class="QWidget" name="helpLabelsWidget" native="true">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>100</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>150</height>
+                   </size>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_21">
+                   <item alignment="Qt::AlignTop">
+                    <widget class="QLabel" name="label_7">
+                     <property name="text">
+                      <string>App made by: Michał Tajak and Dominik Dziechciarz for JPWP</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <property name="wordWrap">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_9">
+                     <property name="text">
+                      <string>For additional help please contact: veryrealemail@gmail.com</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <property name="wordWrap">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </widget>
              <widget class="QWidget" name="infoPage">
-              <widget class="QLabel" name="label">
+              <widget class="QWidget" name="infoPanelDataWidget" native="true">
                <property name="geometry">
                 <rect>
-                 <x>50</x>
-                 <y>90</y>
-                 <width>81</width>
-                 <height>16</height>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>180</width>
+                 <height>300</height>
                 </rect>
                </property>
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
+               <property name="minimumSize">
+                <size>
+                 <width>180</width>
+                 <height>300</height>
+                </size>
                </property>
-               <property name="text">
-                <string>Information</string>
+               <property name="maximumSize">
+                <size>
+                 <width>180</width>
+                 <height>300</height>
+                </size>
                </property>
+               <layout class="QVBoxLayout" name="verticalLayout_16">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+                 <widget class="QWidget" name="capacityWidget" native="true">
+                  <property name="minimumSize">
+                   <size>
+                    <width>170</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>150</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_17">
+                   <item>
+                    <widget class="QLabel" name="capacityLabel">
+                     <property name="text">
+                      <string>Capacity: 400kWh</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+                 <widget class="QWidget" name="angleWidget" native="true">
+                  <property name="minimumSize">
+                   <size>
+                    <width>170</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_18">
+                   <item>
+                    <widget class="QLabel" name="angleLabel">
+                     <property name="text">
+                      <string>Angle of Inclination:  30   </string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item alignment="Qt::AlignHCenter">
+                 <widget class="QWidget" name="installedDateWidget" native="true">
+                  <property name="minimumSize">
+                   <size>
+                    <width>170</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>150</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_19">
+                   <item>
+                    <widget class="QLabel" name="installedDateLavel">
+                     <property name="text">
+                      <string>Date of Installation: 20.02.202</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </widget>
             </widget>
@@ -583,7 +752,7 @@
           <item>
            <widget class="QStackedWidget" name="mainContent">
             <property name="currentIndex">
-             <number>0</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="homePage">
              <widget class="QLabel" name="label_4">
@@ -609,7 +778,7 @@
                </rect>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_11">
-               <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+               <item alignment="Qt::AlignHCenter|Qt::AlignTop">
                 <widget class="QWidget" name="graphWidgetName" native="true">
                  <property name="minimumSize">
                   <size>
@@ -647,12 +816,21 @@
                 </widget>
                </item>
                <item>
-                <widget class="QGraphicsView" name="graphicsView">
+                <widget class="QLabel" name="graphLabelHome">
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
-                   <height>100</height>
+                   <height>320</height>
                   </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>320</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
                  </property>
                 </widget>
                </item>
@@ -849,17 +1027,12 @@
                     </item>
                     <item>
                      <property name="text">
+                      <string>This Month</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
                       <string>Last Month</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Last Year</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Lifetime</string>
                      </property>
                     </item>
                    </widget>
@@ -868,25 +1041,58 @@
                 </widget>
                </item>
                <item>
-                <widget class="QGraphicsView" name="graphicsView_2"/>
+                <widget class="QStackedWidget" name="stackedWidetStats">
+                 <widget class="QWidget" name="lastDayPage">
+                  <widget class="QLabel" name="lastDayGraph">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>602</width>
+                     <height>326</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </widget>
+                 <widget class="QWidget" name="lastMonthPage">
+                  <widget class="QLabel" name="lastMonthGraph">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>602</width>
+                     <height>326</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </widget>
+                 <widget class="QWidget" name="thisMonthPage">
+                  <widget class="QLabel" name="thisMonthGraph">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>602</width>
+                     <height>326</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </widget>
+                </widget>
                </item>
               </layout>
              </widget>
             </widget>
             <widget class="QWidget" name="predictionsPage">
-             <widget class="QLabel" name="label_6">
-              <property name="geometry">
-               <rect>
-                <x>270</x>
-                <y>550</y>
-                <width>101</width>
-                <height>41</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Predictions</string>
-              </property>
-             </widget>
              <widget class="QWidget" name="graphWidget_2" native="true">
               <property name="enabled">
                <bool>true</bool>
@@ -900,11 +1106,11 @@
                </rect>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_13">
-               <item alignment="Qt::AlignHCenter">
+               <item alignment="Qt::AlignHCenter|Qt::AlignTop">
                 <widget class="QWidget" name="graphWidgetName_2" native="true">
                  <property name="minimumSize">
                   <size>
-                   <width>220</width>
+                   <width>200</width>
                    <height>20</height>
                   </size>
                  </property>
@@ -915,7 +1121,19 @@
                   </size>
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_10">
-                  <item alignment="Qt::AlignHCenter">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>9</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>9</number>
+                  </property>
+                  <item alignment="Qt::AlignHCenter|Qt::AlignTop">
                    <widget class="QLabel" name="predictedGraphName">
                     <property name="minimumSize">
                      <size>
@@ -935,12 +1153,15 @@
                 </widget>
                </item>
                <item>
-                <widget class="QGraphicsView" name="graphicsView_3">
-                 <property name="minimumSize">
+                <widget class="QLabel" name="predictedGraph">
+                 <property name="maximumSize">
                   <size>
-                   <width>0</width>
-                   <height>100</height>
+                   <width>16777215</width>
+                   <height>320</height>
                   </size>
+                 </property>
+                 <property name="text">
+                  <string/>
                  </property>
                 </widget>
                </item>

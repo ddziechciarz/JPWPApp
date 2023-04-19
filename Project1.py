@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Project1EkxNtS.ui'
+## Form generated from reading UI file 'Project1cVofPo.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -15,10 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGraphicsView,
-    QHBoxLayout, QLabel, QMainWindow, QPushButton,
-    QSizePolicy, QSpacerItem, QStackedWidget, QVBoxLayout,
-    QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
+    QLabel, QMainWindow, QPushButton, QSizePolicy,
+    QSpacerItem, QStackedWidget, QVBoxLayout, QWidget)
 import resources_rc
 
 class Ui_MainWindow(object):
@@ -108,7 +107,27 @@ class Ui_MainWindow(object):
 "	border-top-left-radius: 10px;\n"
 "	border-bottom-right-radius: 10px;\n"
 "}\n"
-"")
+"#angleWidget{\n"
+"	background-color: #FFBC42;\n"
+"	border-top-left-radius"
+                        ": 10px;\n"
+"	border-bottom-right-radius: 10px;\n"
+"}\n"
+"#capacityWidget{\n"
+"	background-color: #FFBC42;\n"
+"	border-top-left-radius: 10px;\n"
+"	border-bottom-right-radius: 10px;\n"
+"}\n"
+"#installedDateWidget{\n"
+"	background-color: #FFBC42;\n"
+"	border-top-left-radius: 10px;\n"
+"	border-bottom-right-radius: 10px;\n"
+"}\n"
+"#helpLabelsWidget{\n"
+"	background-color: #FFBC42;\n"
+"	border-top-left-radius: 10px;\n"
+"	border-bottom-right-radius: 10px;\n"
+"}")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.horizontalLayout = QHBoxLayout(self.centralwidget)
@@ -302,17 +321,93 @@ class Ui_MainWindow(object):
         self.leftMenuContents.addWidget(self.settingsPage)
         self.helpPage = QWidget()
         self.helpPage.setObjectName(u"helpPage")
-        self.label_3 = QLabel(self.helpPage)
-        self.label_3.setObjectName(u"label_3")
-        self.label_3.setGeometry(QRect(70, 110, 49, 16))
+        self.helpInnerWidget = QWidget(self.helpPage)
+        self.helpInnerWidget.setObjectName(u"helpInnerWidget")
+        self.helpInnerWidget.setGeometry(QRect(0, 0, 180, 500))
+        self.helpInnerWidget.setMinimumSize(QSize(180, 500))
+        self.helpInnerWidget.setMaximumSize(QSize(180, 500))
+        self.verticalLayout_20 = QVBoxLayout(self.helpInnerWidget)
+        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
+        self.helpLabelsWidget = QWidget(self.helpInnerWidget)
+        self.helpLabelsWidget.setObjectName(u"helpLabelsWidget")
+        self.helpLabelsWidget.setMinimumSize(QSize(0, 100))
+        self.helpLabelsWidget.setMaximumSize(QSize(16777215, 150))
+        self.verticalLayout_21 = QVBoxLayout(self.helpLabelsWidget)
+        self.verticalLayout_21.setObjectName(u"verticalLayout_21")
+        self.label_7 = QLabel(self.helpLabelsWidget)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setAlignment(Qt.AlignCenter)
+        self.label_7.setWordWrap(True)
+
+        self.verticalLayout_21.addWidget(self.label_7, 0, Qt.AlignTop)
+
+        self.label_9 = QLabel(self.helpLabelsWidget)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setAlignment(Qt.AlignCenter)
+        self.label_9.setWordWrap(True)
+
+        self.verticalLayout_21.addWidget(self.label_9)
+
+
+        self.verticalLayout_20.addWidget(self.helpLabelsWidget, 0, Qt.AlignTop)
+
         self.leftMenuContents.addWidget(self.helpPage)
         self.infoPage = QWidget()
         self.infoPage.setObjectName(u"infoPage")
-        self.label = QLabel(self.infoPage)
-        self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(50, 90, 81, 16))
-        sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
-        self.label.setSizePolicy(sizePolicy)
+        self.infoPanelDataWidget = QWidget(self.infoPage)
+        self.infoPanelDataWidget.setObjectName(u"infoPanelDataWidget")
+        self.infoPanelDataWidget.setGeometry(QRect(0, 0, 180, 300))
+        self.infoPanelDataWidget.setMinimumSize(QSize(180, 300))
+        self.infoPanelDataWidget.setMaximumSize(QSize(180, 300))
+        self.verticalLayout_16 = QVBoxLayout(self.infoPanelDataWidget)
+        self.verticalLayout_16.setSpacing(0)
+        self.verticalLayout_16.setObjectName(u"verticalLayout_16")
+        self.verticalLayout_16.setContentsMargins(0, -1, -1, -1)
+        self.capacityWidget = QWidget(self.infoPanelDataWidget)
+        self.capacityWidget.setObjectName(u"capacityWidget")
+        self.capacityWidget.setMinimumSize(QSize(170, 50))
+        self.capacityWidget.setMaximumSize(QSize(150, 50))
+        self.verticalLayout_17 = QVBoxLayout(self.capacityWidget)
+        self.verticalLayout_17.setObjectName(u"verticalLayout_17")
+        self.capacityLabel = QLabel(self.capacityWidget)
+        self.capacityLabel.setObjectName(u"capacityLabel")
+        self.capacityLabel.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_17.addWidget(self.capacityLabel)
+
+
+        self.verticalLayout_16.addWidget(self.capacityWidget, 0, Qt.AlignHCenter|Qt.AlignTop)
+
+        self.angleWidget = QWidget(self.infoPanelDataWidget)
+        self.angleWidget.setObjectName(u"angleWidget")
+        self.angleWidget.setMinimumSize(QSize(170, 50))
+        self.angleWidget.setMaximumSize(QSize(100, 50))
+        self.verticalLayout_18 = QVBoxLayout(self.angleWidget)
+        self.verticalLayout_18.setObjectName(u"verticalLayout_18")
+        self.angleLabel = QLabel(self.angleWidget)
+        self.angleLabel.setObjectName(u"angleLabel")
+        self.angleLabel.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_18.addWidget(self.angleLabel)
+
+
+        self.verticalLayout_16.addWidget(self.angleWidget, 0, Qt.AlignHCenter|Qt.AlignTop)
+
+        self.installedDateWidget = QWidget(self.infoPanelDataWidget)
+        self.installedDateWidget.setObjectName(u"installedDateWidget")
+        self.installedDateWidget.setMinimumSize(QSize(170, 50))
+        self.installedDateWidget.setMaximumSize(QSize(150, 50))
+        self.verticalLayout_19 = QVBoxLayout(self.installedDateWidget)
+        self.verticalLayout_19.setObjectName(u"verticalLayout_19")
+        self.installedDateLavel = QLabel(self.installedDateWidget)
+        self.installedDateLavel.setObjectName(u"installedDateLavel")
+        self.installedDateLavel.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_19.addWidget(self.installedDateLavel)
+
+
+        self.verticalLayout_16.addWidget(self.installedDateWidget, 0, Qt.AlignHCenter)
+
         self.leftMenuContents.addWidget(self.infoPage)
 
         self.verticalLayout_8.addWidget(self.contents)
@@ -361,13 +456,14 @@ class Ui_MainWindow(object):
         self.horizontalLayout_8.addWidget(self.label_10, 0, Qt.AlignVCenter)
 
 
-        self.verticalLayout_11.addWidget(self.graphWidgetName, 0, Qt.AlignHCenter|Qt.AlignVCenter)
+        self.verticalLayout_11.addWidget(self.graphWidgetName, 0, Qt.AlignHCenter|Qt.AlignTop)
 
-        self.graphicsView = QGraphicsView(self.graphWidget)
-        self.graphicsView.setObjectName(u"graphicsView")
-        self.graphicsView.setMinimumSize(QSize(0, 100))
+        self.graphLabelHome = QLabel(self.graphWidget)
+        self.graphLabelHome.setObjectName(u"graphLabelHome")
+        self.graphLabelHome.setMinimumSize(QSize(0, 320))
+        self.graphLabelHome.setMaximumSize(QSize(16777215, 320))
 
-        self.verticalLayout_11.addWidget(self.graphicsView)
+        self.verticalLayout_11.addWidget(self.graphLabelHome)
 
         self.dataWidget = QWidget(self.homePage)
         self.dataWidget.setObjectName(u"dataWidget")
@@ -471,7 +567,6 @@ class Ui_MainWindow(object):
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
-        self.comboBox.addItem("")
         self.comboBox.setObjectName(u"comboBox")
         sizePolicy5 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
         sizePolicy5.setHorizontalStretch(0)
@@ -486,17 +581,32 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_12.addWidget(self.statGraphSettingsWidet, 0, Qt.AlignRight|Qt.AlignTop)
 
-        self.graphicsView_2 = QGraphicsView(self.statGraphWidget)
-        self.graphicsView_2.setObjectName(u"graphicsView_2")
+        self.stackedWidetStats = QStackedWidget(self.statGraphWidget)
+        self.stackedWidetStats.setObjectName(u"stackedWidetStats")
+        self.lastDayPage = QWidget()
+        self.lastDayPage.setObjectName(u"lastDayPage")
+        self.lastDayGraph = QLabel(self.lastDayPage)
+        self.lastDayGraph.setObjectName(u"lastDayGraph")
+        self.lastDayGraph.setGeometry(QRect(0, 0, 602, 326))
+        self.stackedWidetStats.addWidget(self.lastDayPage)
+        self.lastMonthPage = QWidget()
+        self.lastMonthPage.setObjectName(u"lastMonthPage")
+        self.lastMonthGraph = QLabel(self.lastMonthPage)
+        self.lastMonthGraph.setObjectName(u"lastMonthGraph")
+        self.lastMonthGraph.setGeometry(QRect(0, 0, 602, 326))
+        self.stackedWidetStats.addWidget(self.lastMonthPage)
+        self.thisMonthPage = QWidget()
+        self.thisMonthPage.setObjectName(u"thisMonthPage")
+        self.thisMonthGraph = QLabel(self.thisMonthPage)
+        self.thisMonthGraph.setObjectName(u"thisMonthGraph")
+        self.thisMonthGraph.setGeometry(QRect(0, 0, 602, 326))
+        self.stackedWidetStats.addWidget(self.thisMonthPage)
 
-        self.verticalLayout_12.addWidget(self.graphicsView_2)
+        self.verticalLayout_12.addWidget(self.stackedWidetStats)
 
         self.mainContent.addWidget(self.statisticsPage)
         self.predictionsPage = QWidget()
         self.predictionsPage.setObjectName(u"predictionsPage")
-        self.label_6 = QLabel(self.predictionsPage)
-        self.label_6.setObjectName(u"label_6")
-        self.label_6.setGeometry(QRect(270, 550, 101, 41))
         self.graphWidget_2 = QWidget(self.predictionsPage)
         self.graphWidget_2.setObjectName(u"graphWidget_2")
         self.graphWidget_2.setEnabled(True)
@@ -505,25 +615,26 @@ class Ui_MainWindow(object):
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
         self.graphWidgetName_2 = QWidget(self.graphWidget_2)
         self.graphWidgetName_2.setObjectName(u"graphWidgetName_2")
-        self.graphWidgetName_2.setMinimumSize(QSize(220, 20))
+        self.graphWidgetName_2.setMinimumSize(QSize(200, 20))
         self.graphWidgetName_2.setMaximumSize(QSize(200, 30))
         self.horizontalLayout_10 = QHBoxLayout(self.graphWidgetName_2)
         self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
+        self.horizontalLayout_10.setContentsMargins(0, 9, 0, 9)
         self.predictedGraphName = QLabel(self.graphWidgetName_2)
         self.predictedGraphName.setObjectName(u"predictedGraphName")
         self.predictedGraphName.setMinimumSize(QSize(200, 0))
         self.predictedGraphName.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_10.addWidget(self.predictedGraphName, 0, Qt.AlignHCenter)
+        self.horizontalLayout_10.addWidget(self.predictedGraphName, 0, Qt.AlignHCenter|Qt.AlignTop)
 
 
-        self.verticalLayout_13.addWidget(self.graphWidgetName_2, 0, Qt.AlignHCenter)
+        self.verticalLayout_13.addWidget(self.graphWidgetName_2, 0, Qt.AlignHCenter|Qt.AlignTop)
 
-        self.graphicsView_3 = QGraphicsView(self.graphWidget_2)
-        self.graphicsView_3.setObjectName(u"graphicsView_3")
-        self.graphicsView_3.setMinimumSize(QSize(0, 100))
+        self.predictedGraph = QLabel(self.graphWidget_2)
+        self.predictedGraph.setObjectName(u"predictedGraph")
+        self.predictedGraph.setMaximumSize(QSize(16777215, 320))
 
-        self.verticalLayout_13.addWidget(self.graphicsView_3)
+        self.verticalLayout_13.addWidget(self.predictedGraph)
 
         self.predictionsDataWidget = QWidget(self.predictionsPage)
         self.predictionsDataWidget.setObjectName(u"predictionsDataWidget")
@@ -581,7 +692,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.mainContent.setCurrentIndex(0)
+        self.mainContent.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -617,10 +728,14 @@ class Ui_MainWindow(object):
         self.menuLabel.setText(QCoreApplication.translate("MainWindow", u"More Menu", None))
         self.closeButton.setText("")
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Help", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Information", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"App made by: Micha\u0142 Tajak and Dominik Dziechciarz for JPWP", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"For additional help please contact: veryrealemail@gmail.com", None))
+        self.capacityLabel.setText(QCoreApplication.translate("MainWindow", u"Capacity: 400kWh", None))
+        self.angleLabel.setText(QCoreApplication.translate("MainWindow", u"Angle of Inclination:  30   ", None))
+        self.installedDateLavel.setText(QCoreApplication.translate("MainWindow", u"Date of Installation: 20.02.202", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Home", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Today's production", None))
+        self.graphLabelHome.setText("")
         self.totalProducedLabel.setText(QCoreApplication.translate("MainWindow", u"Total Produced Energy Today", None))
         self.totalProducedValue.setText(QCoreApplication.translate("MainWindow", u"10kWh", None))
         self.moneySavedTodayLabel.setText(QCoreApplication.translate("MainWindow", u"Money saved today", None))
@@ -630,12 +745,14 @@ class Ui_MainWindow(object):
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"statistics", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Choose Range:", None))
         self.comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Last Day", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Last Month", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Last Year", None))
-        self.comboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Lifetime", None))
+        self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"This Month", None))
+        self.comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Last Month", None))
 
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Predictions", None))
+        self.lastDayGraph.setText("")
+        self.lastMonthGraph.setText("")
+        self.thisMonthGraph.setText("")
         self.predictedGraphName.setText(QCoreApplication.translate("MainWindow", u"Predicted production for next week", None))
+        self.predictedGraph.setText("")
         self.predictedProductionLabel.setText(QCoreApplication.translate("MainWindow", u"Predicted Production:", None))
         self.predictedProductionValue.setText(QCoreApplication.translate("MainWindow", u"10 kWh", None))
         self.predictedSavingsLabel.setText(QCoreApplication.translate("MainWindow", u"Predicted Savings:", None))
