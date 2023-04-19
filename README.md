@@ -9,6 +9,11 @@ przejdź do folderu z Pythonem Python310/Lib/site-packages/qt6_applications/QT/b
 https://www.youtube.com/watch?v=NU3DQwMKz00 tutorial instalacji
 
 ## zadania
+Przykładowa zakładka Predictions:
+![Alt text](/repository/assets/SampleUI.jpg?raw=true "Sample UI")
+
+
+
 Wykorzystując biblioteki 'csv' odczytaj dane z pliku 'charts.csv' znajdującego się w folderze 'data', przeykładowa implementacja: 
 ```
 data = []
