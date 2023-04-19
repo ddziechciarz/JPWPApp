@@ -10,17 +10,15 @@ class MainWindow(QMainWindow):
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.setFixedSize(1072, 683)
         self.show()
 
-        self.ui.settingButton.clicked.connect(lambda: self.smallButtonClicked(0))
-        self.ui.infoButton.clicked.connect(lambda: self.smallButtonClicked(2))
-        self.ui.helpButton.clicked.connect(lambda: self.smallButtonClicked(1))
+        self.ui.infoButton.clicked.connect(lambda: self.ui.leftMenuContents.setCurrentIndex(2))
+        self.ui.helpButton.clicked.connect(lambda: self.ui.leftMenuContents.setCurrentIndex(1))
 
         self.ui.homeButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(2))
-        self.ui.statsButton.clicked.connect(lambda: self.statWindowClicked())
+        self.ui.statsButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(0))
         self.ui.predButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(1))
-
-        self.ui.menuButton.clicked.connect(lambda: self.ui.centerLeftMenuSubcontainer.setHidden(not self.ui.centerLeftMenuSubcontainer.isHidden()))
 
         self.ui.comboBox.activated.connect(lambda: self.comboBoxClicked())
 
@@ -45,6 +43,14 @@ class MainWindow(QMainWindow):
         self.ui.predictedGraph.setPixmap(pixmapPrediction)
         self.ui.predictedGraph.setScaledContents(True)
 
+        self.todayTotalEnergy = charts_read.get_sum_energy_today()
+        self.thisMonthTotalEnergy = charts_read.get_sum_energy_today_month()
+        self.lastMonthTotalEnergy = charts_read.get_sum_energy_last_month()
+        self.predictedTotalEnergy = charts_read.get_sum_energy_prediction()
+
+        self.updateHomeStats(self.todayTotalEnergy)
+        self.updatePredictionStats(self.predictedTotalEnergy)
+        self.updateStaticData(charts_read.get_static_data())
 
 
 
@@ -52,37 +58,40 @@ class MainWindow(QMainWindow):
         currentSelection = self.ui.comboBox.currentText()
         if currentSelection == 'Last Day':
             self.ui.stackedWidetStats.setCurrentIndex(0)
+            self.updateStats(self.todayTotalEnergy)
         elif currentSelection == 'This Month':
             self.ui.stackedWidetStats.setCurrentIndex(2)
+            self.updateStats(self.thisMonthTotalEnergy)
         else:
             self.ui.stackedWidetStats.setCurrentIndex(1)
+            self.updateStats(self.lastMonthTotalEnergy)
 
+    def updateHomeStats(self, energy):
+        self.ui.totalProducedValue.setText(str(energy) + "kWh")
+        self.ui.moneySavedValue.setText(str(round(energy * 0.77,2)) + " PLN")
+        self.ui.avoidedCO2Value.setText(str(round(energy * 0.452,2)) + " kg")
 
-    def smallButtonClicked(self, index):
-        if self.ui.leftMenuContents.currentIndex() == index:
-            self.ui.centerLeftMenuSubcontainer.setHidden(not self.ui.centerLeftMenuSubcontainer.isHidden())
-        else:
-            self.ui.centerLeftMenuSubcontainer.setHidden(False)
-        self.ui.leftMenuContents.setCurrentIndex(index)
+    def updatePredictionStats(self, energy):
+        self.ui.predictedProductionValue.setText(str(energy) + "kWh")
+        self.ui.predictedSavingsValue.setText(str(round(energy * 0.77,2)) + " PLN")
 
-    def homeWindowClicked(self):
-        self.ui.mainContent.setCurrentIndex(2)
-        self.ui.homeGraph.plotItem
+    def updateStats(self, energy):
+        self.ui.totalProducedValueStat.setText(str(energy) + "kWh")
+        self.ui.moneySavedValueStat.setText(str(round(energy * 0.77, 2)) + " PLN")
+        self.ui.avoidedCO2ValueStat.setText(str(round(energy * 0.452, 2)) + " kg")
 
-    def statWindowClicked(self):
-        self.ui.mainContent.setCurrentIndex(0)
-        #self.ui.homeGraph
-
-
-
-
+    def updateStaticData(self, data):
+        self.ui.capacityLabel.setText("Capacity: " + str(data[0]) + "kWh")
+        self.ui.angleLabel.setText("Angle of Inclination: " + str(data[1]))
+        date = data[2].split("-")
+        self.ui.installedDateLavel.setText("Installation Date: " + str(date[0]) + "." + str(date[1]) + "." + str(date[2]))
 
 if __name__ == "__main__":
-    #todayCharts = charts.charts_today()
-    for requirement in freeze(local_only=True):
-        print(requirement)
-    charts_read.chart_today_img()
+    #for requirement in freeze(local_only=True):
+    #    print(requirement)
+    #charts_read.chart_today_img()
 
+    print(charts_read.get_static_data())
     app = QApplication(sys.argv)
     window = MainWindow()
     window.show()

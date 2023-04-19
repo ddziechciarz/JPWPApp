@@ -5,6 +5,10 @@ import matplotlib.pyplot as plt
 def chart_today_img():
     time = []
     value = []
+    with open('data/energy.csv') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            energy = float(row[0])
     with open('data/charts_today.csv') as csvfile:
         reader = csv.reader(csvfile)
         for row in reader:
@@ -21,6 +25,17 @@ def chart_today_img():
     plt.grid(axis='y')
     plt.savefig('img/charts_today.jpg', format='jpg')
     plt.close()
+    return energy
+
+def get_static_data():
+    data = []
+    with open('data/basic.csv') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            value = row[0].split(';')
+            data.append(value[1])
+    return data
+
 
 
 def charts_month_img(month):
@@ -42,6 +57,7 @@ def charts_month_img(month):
     plt.savefig('img/charts_month_' + month + '.jpg', format='jpg')
     plt.close()
 
+
 def charts_prediction_img():
     time = []
     value = []
@@ -62,10 +78,54 @@ def charts_prediction_img():
     plt.close()
 
 
+def get_sum_energy_today():
+    with open('data/energy.csv') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            sum_today = float(row[0])
+    return round(sum_today, 2)
+
+
+def get_sum_energy_prediction():
+    sum_prediction = 0
+    with open('data/energy_prediction.csv') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            split = row[0].split(';')
+            sum_prediction += float(split[1])
+    return round(sum_prediction, 2)
+
+
+def get_sum_energy_today_month():
+    sum_today_month = 0
+    with open('data/charts_month_today.csv') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            split = row[0].split(';')
+            sum_today_month += float(split[1])
+    return round(sum_today_month, 2)
+
+
+def get_sum_energy_last_month():
+    sum_last_month = 0
+    with open('data/charts_month_last.csv') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            split = row[0].split(';')
+            sum_last_month += float(split[1])
+    return round(sum_last_month, 2)
+
+
 def all_img():
     chart_today_img()
     charts_month_img('today')
     charts_month_img('last')
     charts_prediction_img()
+    print(get_sum_energy_today())
+    print(get_sum_energy_prediction())
+    print(get_sum_energy_today_month())
+    print(get_sum_energy_last_month())
+
+
 
 all_img()
