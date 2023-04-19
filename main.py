@@ -91,7 +91,9 @@ if __name__ == "__main__":
     #    print(requirement)
     #charts_read.chart_today_img()
 
-    print(charts_read.get_static_data())
+    #print(charts_read.get_static_data())
+    charts_read.all_img()
+
     app = QApplication(sys.argv)
     window = MainWindow()
     window.show()

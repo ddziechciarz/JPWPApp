@@ -121,10 +121,10 @@ def all_img():
     charts_month_img('today')
     charts_month_img('last')
     charts_prediction_img()
-    print(get_sum_energy_today())
-    print(get_sum_energy_prediction())
-    print(get_sum_energy_today_month())
-    print(get_sum_energy_last_month())
+    #print(get_sum_energy_today())
+    #print(get_sum_energy_prediction())
+    #print(get_sum_energy_today_month())
+    #print(get_sum_energy_last_month())
 
 
 
