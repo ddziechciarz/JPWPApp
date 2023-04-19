@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Project1kaDcTM.ui'
+## Form generated from reading UI file 'Project1VEdPQv.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -308,12 +308,6 @@ class Ui_MainWindow(object):
         self.leftMenuContents.setSizePolicy(sizePolicy)
         self.leftMenuContents.setMinimumSize(QSize(100, 0))
         self.leftMenuContents.setMaximumSize(QSize(180, 16777215))
-        self.settingsPage = QWidget()
-        self.settingsPage.setObjectName(u"settingsPage")
-        self.label_2 = QLabel(self.settingsPage)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(70, 70, 49, 16))
-        self.leftMenuContents.addWidget(self.settingsPage)
         self.helpPage = QWidget()
         self.helpPage.setObjectName(u"helpPage")
         self.helpInnerWidget = QWidget(self.helpPage)
@@ -428,9 +422,6 @@ class Ui_MainWindow(object):
         self.mainContent.setObjectName(u"mainContent")
         self.homePage = QWidget()
         self.homePage.setObjectName(u"homePage")
-        self.label_4 = QLabel(self.homePage)
-        self.label_4.setObjectName(u"label_4")
-        self.label_4.setGeometry(QRect(300, 560, 49, 16))
         self.graphWidget = QWidget(self.homePage)
         self.graphWidget.setObjectName(u"graphWidget")
         self.graphWidget.setGeometry(QRect(20, 30, 620, 380))
@@ -527,9 +518,6 @@ class Ui_MainWindow(object):
         self.mainContent.addWidget(self.homePage)
         self.statisticsPage = QWidget()
         self.statisticsPage.setObjectName(u"statisticsPage")
-        self.label_5 = QLabel(self.statisticsPage)
-        self.label_5.setObjectName(u"label_5")
-        self.label_5.setGeometry(QRect(280, 580, 121, 31))
         self.statGraphWidget = QWidget(self.statisticsPage)
         self.statGraphWidget.setObjectName(u"statGraphWidget")
         self.statGraphWidget.setGeometry(QRect(20, 30, 620, 380))
@@ -754,7 +742,8 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.mainContent.setCurrentIndex(1)
+        self.leftMenuContents.setCurrentIndex(0)
+        self.mainContent.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -779,15 +768,13 @@ class Ui_MainWindow(object):
         self.helpButton.setToolTip(QCoreApplication.translate("MainWindow", u"Help", None))
 #endif // QT_CONFIG(tooltip)
         self.helpButton.setText(QCoreApplication.translate("MainWindow", u"    Help", None))
-        self.menuLabel.setText(QCoreApplication.translate("MainWindow", u"More Menu", None))
+        self.menuLabel.setText("")
         self.closeButton.setText("")
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"App made by: Micha\u0142 Tajak and Dominik Dziechciarz for JPWP", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"For additional help please contact: veryrealemail@gmail.com", None))
         self.capacityLabel.setText(QCoreApplication.translate("MainWindow", u"Capacity: 400kWh", None))
         self.angleLabel.setText(QCoreApplication.translate("MainWindow", u"Angle of Inclination:  30   ", None))
         self.installedDateLavel.setText(QCoreApplication.translate("MainWindow", u"Date of Installation: 20.02.202", None))
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Home", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Today's production", None))
         self.graphLabelHome.setText("")
         self.totalProducedLabel.setText(QCoreApplication.translate("MainWindow", u"Total Produced Energy Today", None))
@@ -796,7 +783,6 @@ class Ui_MainWindow(object):
         self.moneySavedValue.setText(QCoreApplication.translate("MainWindow", u"50 PLN", None))
         self.avoidedCO2Label.setText(QCoreApplication.translate("MainWindow", u"CO2 Avoided Today", None))
         self.avoidedCO2Value.setText(QCoreApplication.translate("MainWindow", u"200kg", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"statistics", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Choose Range:", None))
         self.comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Last Day", None))
         self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"This Month", None))
