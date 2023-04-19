@@ -2,6 +2,7 @@ import os
 import sys
 
 from Project1 import *
+import charts_read
 
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
@@ -35,3 +36,4 @@ if __name__ == "__main__":
     window = MainWindow()
     window.show()
     sys.exit(app.exec())
+    charts_read.chart_today_img()
