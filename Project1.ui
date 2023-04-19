@@ -538,19 +538,6 @@
               </widget>
              </widget>
              <widget class="QWidget" name="helpPage">
-              <widget class="QLabel" name="label_3">
-               <property name="geometry">
-                <rect>
-                 <x>30</x>
-                 <y>540</y>
-                 <width>49</width>
-                 <height>16</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>Help</string>
-               </property>
-              </widget>
               <widget class="QWidget" name="helpInnerWidget" native="true">
                <property name="geometry">
                 <rect>
@@ -604,7 +591,7 @@
                    <item>
                     <widget class="QLabel" name="label_9">
                      <property name="text">
-                      <string>For additional help please contant: veryrealemail@gmail.com</string>
+                      <string>For additional help please contact: veryrealemail@gmail.com</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
@@ -621,25 +608,6 @@
               </widget>
              </widget>
              <widget class="QWidget" name="infoPage">
-              <widget class="QLabel" name="label">
-               <property name="geometry">
-                <rect>
-                 <x>50</x>
-                 <y>550</y>
-                 <width>81</width>
-                 <height>16</height>
-                </rect>
-               </property>
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="text">
-                <string>Information</string>
-               </property>
-              </widget>
               <widget class="QWidget" name="infoPanelDataWidget" native="true">
                <property name="geometry">
                 <rect>
@@ -784,7 +752,7 @@
           <item>
            <widget class="QStackedWidget" name="mainContent">
             <property name="currentIndex">
-             <number>1</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="homePage">
              <widget class="QLabel" name="label_4">
@@ -1125,19 +1093,6 @@
              </widget>
             </widget>
             <widget class="QWidget" name="predictionsPage">
-             <widget class="QLabel" name="label_6">
-              <property name="geometry">
-               <rect>
-                <x>270</x>
-                <y>550</y>
-                <width>101</width>
-                <height>41</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Predictions</string>
-              </property>
-             </widget>
              <widget class="QWidget" name="graphWidget_2" native="true">
               <property name="enabled">
                <bool>true</bool>
@@ -1151,11 +1106,11 @@
                </rect>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_13">
-               <item alignment="Qt::AlignHCenter">
+               <item alignment="Qt::AlignHCenter|Qt::AlignTop">
                 <widget class="QWidget" name="graphWidgetName_2" native="true">
                  <property name="minimumSize">
                   <size>
-                   <width>220</width>
+                   <width>200</width>
                    <height>20</height>
                   </size>
                  </property>
@@ -1166,7 +1121,19 @@
                   </size>
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_10">
-                  <item alignment="Qt::AlignHCenter">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>9</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>9</number>
+                  </property>
+                  <item alignment="Qt::AlignHCenter|Qt::AlignTop">
                    <widget class="QLabel" name="predictedGraphName">
                     <property name="minimumSize">
                      <size>
@@ -1186,12 +1153,15 @@
                 </widget>
                </item>
                <item>
-                <widget class="QGraphicsView" name="graphicsView_3">
-                 <property name="minimumSize">
+                <widget class="QLabel" name="predictedGraph">
+                 <property name="maximumSize">
                   <size>
-                   <width>0</width>
-                   <height>100</height>
+                   <width>16777215</width>
+                   <height>320</height>
                   </size>
+                 </property>
+                 <property name="text">
+                  <string/>
                  </property>
                 </widget>
                </item>

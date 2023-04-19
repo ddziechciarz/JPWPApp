@@ -28,6 +28,7 @@ class MainWindow(QMainWindow):
         pixmapStatToday = QPixmap('img/charts_today.jpg')
         pixmapStatLastMonth = QPixmap('img/charts_month_last.jpg')
         pixmapStatThisMonth = QPixmap('img/charts_month_today.jpg')
+        pixmapPrediction = QPixmap('img/energy_prediction.jpg')
 
         self.ui.graphLabelHome.setPixmap(pixmapHome)
         self.ui.graphLabelHome.setScaledContents(True)
@@ -40,6 +41,9 @@ class MainWindow(QMainWindow):
 
         self.ui.thisMonthGraph.setPixmap(pixmapStatThisMonth)
         self.ui.thisMonthGraph.setScaledContents(True)
+
+        self.ui.predictedGraph.setPixmap(pixmapPrediction)
+        self.ui.predictedGraph.setScaledContents(True)
 
 
 

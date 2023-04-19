@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Project1FvVsBs.ui'
+## Form generated from reading UI file 'Project1cVofPo.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -15,10 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGraphicsView,
-    QHBoxLayout, QLabel, QMainWindow, QPushButton,
-    QSizePolicy, QSpacerItem, QStackedWidget, QVBoxLayout,
-    QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
+    QLabel, QMainWindow, QPushButton, QSizePolicy,
+    QSpacerItem, QStackedWidget, QVBoxLayout, QWidget)
 import resources_rc
 
 class Ui_MainWindow(object):
@@ -322,9 +321,6 @@ class Ui_MainWindow(object):
         self.leftMenuContents.addWidget(self.settingsPage)
         self.helpPage = QWidget()
         self.helpPage.setObjectName(u"helpPage")
-        self.label_3 = QLabel(self.helpPage)
-        self.label_3.setObjectName(u"label_3")
-        self.label_3.setGeometry(QRect(30, 540, 49, 16))
         self.helpInnerWidget = QWidget(self.helpPage)
         self.helpInnerWidget.setObjectName(u"helpInnerWidget")
         self.helpInnerWidget.setGeometry(QRect(0, 0, 180, 500))
@@ -358,11 +354,6 @@ class Ui_MainWindow(object):
         self.leftMenuContents.addWidget(self.helpPage)
         self.infoPage = QWidget()
         self.infoPage.setObjectName(u"infoPage")
-        self.label = QLabel(self.infoPage)
-        self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(50, 550, 81, 16))
-        sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
-        self.label.setSizePolicy(sizePolicy)
         self.infoPanelDataWidget = QWidget(self.infoPage)
         self.infoPanelDataWidget.setObjectName(u"infoPanelDataWidget")
         self.infoPanelDataWidget.setGeometry(QRect(0, 0, 180, 300))
@@ -616,9 +607,6 @@ class Ui_MainWindow(object):
         self.mainContent.addWidget(self.statisticsPage)
         self.predictionsPage = QWidget()
         self.predictionsPage.setObjectName(u"predictionsPage")
-        self.label_6 = QLabel(self.predictionsPage)
-        self.label_6.setObjectName(u"label_6")
-        self.label_6.setGeometry(QRect(270, 550, 101, 41))
         self.graphWidget_2 = QWidget(self.predictionsPage)
         self.graphWidget_2.setObjectName(u"graphWidget_2")
         self.graphWidget_2.setEnabled(True)
@@ -627,25 +615,26 @@ class Ui_MainWindow(object):
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
         self.graphWidgetName_2 = QWidget(self.graphWidget_2)
         self.graphWidgetName_2.setObjectName(u"graphWidgetName_2")
-        self.graphWidgetName_2.setMinimumSize(QSize(220, 20))
+        self.graphWidgetName_2.setMinimumSize(QSize(200, 20))
         self.graphWidgetName_2.setMaximumSize(QSize(200, 30))
         self.horizontalLayout_10 = QHBoxLayout(self.graphWidgetName_2)
         self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
+        self.horizontalLayout_10.setContentsMargins(0, 9, 0, 9)
         self.predictedGraphName = QLabel(self.graphWidgetName_2)
         self.predictedGraphName.setObjectName(u"predictedGraphName")
         self.predictedGraphName.setMinimumSize(QSize(200, 0))
         self.predictedGraphName.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_10.addWidget(self.predictedGraphName, 0, Qt.AlignHCenter)
+        self.horizontalLayout_10.addWidget(self.predictedGraphName, 0, Qt.AlignHCenter|Qt.AlignTop)
 
 
-        self.verticalLayout_13.addWidget(self.graphWidgetName_2, 0, Qt.AlignHCenter)
+        self.verticalLayout_13.addWidget(self.graphWidgetName_2, 0, Qt.AlignHCenter|Qt.AlignTop)
 
-        self.graphicsView_3 = QGraphicsView(self.graphWidget_2)
-        self.graphicsView_3.setObjectName(u"graphicsView_3")
-        self.graphicsView_3.setMinimumSize(QSize(0, 100))
+        self.predictedGraph = QLabel(self.graphWidget_2)
+        self.predictedGraph.setObjectName(u"predictedGraph")
+        self.predictedGraph.setMaximumSize(QSize(16777215, 320))
 
-        self.verticalLayout_13.addWidget(self.graphicsView_3)
+        self.verticalLayout_13.addWidget(self.predictedGraph)
 
         self.predictionsDataWidget = QWidget(self.predictionsPage)
         self.predictionsDataWidget.setObjectName(u"predictionsDataWidget")
@@ -703,7 +692,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.mainContent.setCurrentIndex(1)
+        self.mainContent.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -739,10 +728,8 @@ class Ui_MainWindow(object):
         self.menuLabel.setText(QCoreApplication.translate("MainWindow", u"More Menu", None))
         self.closeButton.setText("")
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Help", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"App made by: Micha\u0142 Tajak and Dominik Dziechciarz for JPWP", None))
-        self.label_9.setText(QCoreApplication.translate("MainWindow", u"For additional help please contant: veryrealemail@gmail.com", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Information", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"For additional help please contact: veryrealemail@gmail.com", None))
         self.capacityLabel.setText(QCoreApplication.translate("MainWindow", u"Capacity: 400kWh", None))
         self.angleLabel.setText(QCoreApplication.translate("MainWindow", u"Angle of Inclination:  30   ", None))
         self.installedDateLavel.setText(QCoreApplication.translate("MainWindow", u"Date of Installation: 20.02.202", None))
@@ -764,8 +751,8 @@ class Ui_MainWindow(object):
         self.lastDayGraph.setText("")
         self.lastMonthGraph.setText("")
         self.thisMonthGraph.setText("")
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Predictions", None))
         self.predictedGraphName.setText(QCoreApplication.translate("MainWindow", u"Predicted production for next week", None))
+        self.predictedGraph.setText("")
         self.predictedProductionLabel.setText(QCoreApplication.translate("MainWindow", u"Predicted Production:", None))
         self.predictedProductionValue.setText(QCoreApplication.translate("MainWindow", u"10 kWh", None))
         self.predictedSavingsLabel.setText(QCoreApplication.translate("MainWindow", u"Predicted Savings:", None))
