@@ -1,6 +1,6 @@
 # JPWPApp
 
-##Instalowanie QtDesginer:
+## Instalowanie QtDesginer:
 ```
 pip install PyQt6 
 pip instal pyqt6-tools
