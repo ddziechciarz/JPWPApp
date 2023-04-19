@@ -22,7 +22,36 @@ class MainWindow(QMainWindow):
 
         self.ui.menuButton.clicked.connect(lambda: self.ui.centerLeftMenuSubcontainer.setHidden(not self.ui.centerLeftMenuSubcontainer.isHidden()))
 
+        self.ui.comboBox.activated.connect(lambda: self.comboBoxClicked())
 
+        pixmapHome = QPixmap('img/charts_today.jpg')
+        pixmapStatToday = QPixmap('img/charts_today.jpg')
+        pixmapStatLastMonth = QPixmap('img/charts_month_last.jpg')
+        pixmapStatThisMonth = QPixmap('img/charts_month_today.jpg')
+
+        self.ui.graphLabelHome.setPixmap(pixmapHome)
+        self.ui.graphLabelHome.setScaledContents(True)
+
+        self.ui.lastDayGraph.setPixmap(pixmapStatToday)
+        self.ui.lastDayGraph.setScaledContents(True)
+
+        self.ui.lastMonthGraph.setPixmap(pixmapStatLastMonth)
+        self.ui.lastMonthGraph.setScaledContents(True)
+
+        self.ui.thisMonthGraph.setPixmap(pixmapStatThisMonth)
+        self.ui.thisMonthGraph.setScaledContents(True)
+
+
+
+
+    def comboBoxClicked(self):
+        currentSelection = self.ui.comboBox.currentText()
+        if currentSelection == 'Last Day':
+            self.ui.stackedWidetStats.setCurrentIndex(0)
+        elif currentSelection == 'This Month':
+            self.ui.stackedWidetStats.setCurrentIndex(2)
+        else:
+            self.ui.stackedWidetStats.setCurrentIndex(1)
 
 
     def smallButtonClicked(self, index):
@@ -49,6 +78,7 @@ if __name__ == "__main__":
     for requirement in freeze(local_only=True):
         print(requirement)
     charts_read.chart_today_img()
+
     app = QApplication(sys.argv)
     window = MainWindow()
     window.show()

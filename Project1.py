@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Project1hkpQWh.ui'
+## Form generated from reading UI file 'Project1FvVsBs.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -465,13 +465,14 @@ class Ui_MainWindow(object):
         self.horizontalLayout_8.addWidget(self.label_10, 0, Qt.AlignVCenter)
 
 
-        self.verticalLayout_11.addWidget(self.graphWidgetName, 0, Qt.AlignHCenter|Qt.AlignVCenter)
+        self.verticalLayout_11.addWidget(self.graphWidgetName, 0, Qt.AlignHCenter|Qt.AlignTop)
 
-        self.homeGraph = QGraphicsView(self.graphWidget)
-        self.homeGraph.setObjectName(u"homeGraph")
-        self.homeGraph.setMinimumSize(QSize(0, 100))
+        self.graphLabelHome = QLabel(self.graphWidget)
+        self.graphLabelHome.setObjectName(u"graphLabelHome")
+        self.graphLabelHome.setMinimumSize(QSize(0, 320))
+        self.graphLabelHome.setMaximumSize(QSize(16777215, 320))
 
-        self.verticalLayout_11.addWidget(self.homeGraph)
+        self.verticalLayout_11.addWidget(self.graphLabelHome)
 
         self.dataWidget = QWidget(self.homePage)
         self.dataWidget.setObjectName(u"dataWidget")
@@ -575,7 +576,6 @@ class Ui_MainWindow(object):
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
-        self.comboBox.addItem("")
         self.comboBox.setObjectName(u"comboBox")
         sizePolicy5 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
         sizePolicy5.setHorizontalStretch(0)
@@ -590,10 +590,28 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_12.addWidget(self.statGraphSettingsWidet, 0, Qt.AlignRight|Qt.AlignTop)
 
-        self.graphicsView_2 = QGraphicsView(self.statGraphWidget)
-        self.graphicsView_2.setObjectName(u"graphicsView_2")
+        self.stackedWidetStats = QStackedWidget(self.statGraphWidget)
+        self.stackedWidetStats.setObjectName(u"stackedWidetStats")
+        self.lastDayPage = QWidget()
+        self.lastDayPage.setObjectName(u"lastDayPage")
+        self.lastDayGraph = QLabel(self.lastDayPage)
+        self.lastDayGraph.setObjectName(u"lastDayGraph")
+        self.lastDayGraph.setGeometry(QRect(0, 0, 602, 326))
+        self.stackedWidetStats.addWidget(self.lastDayPage)
+        self.lastMonthPage = QWidget()
+        self.lastMonthPage.setObjectName(u"lastMonthPage")
+        self.lastMonthGraph = QLabel(self.lastMonthPage)
+        self.lastMonthGraph.setObjectName(u"lastMonthGraph")
+        self.lastMonthGraph.setGeometry(QRect(0, 0, 602, 326))
+        self.stackedWidetStats.addWidget(self.lastMonthPage)
+        self.thisMonthPage = QWidget()
+        self.thisMonthPage.setObjectName(u"thisMonthPage")
+        self.thisMonthGraph = QLabel(self.thisMonthPage)
+        self.thisMonthGraph.setObjectName(u"thisMonthGraph")
+        self.thisMonthGraph.setGeometry(QRect(0, 0, 602, 326))
+        self.stackedWidetStats.addWidget(self.thisMonthPage)
 
-        self.verticalLayout_12.addWidget(self.graphicsView_2)
+        self.verticalLayout_12.addWidget(self.stackedWidetStats)
 
         self.mainContent.addWidget(self.statisticsPage)
         self.predictionsPage = QWidget()
@@ -685,7 +703,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.mainContent.setCurrentIndex(0)
+        self.mainContent.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -730,6 +748,7 @@ class Ui_MainWindow(object):
         self.installedDateLavel.setText(QCoreApplication.translate("MainWindow", u"Date of Installation: 20.02.202", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Home", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Today's production", None))
+        self.graphLabelHome.setText("")
         self.totalProducedLabel.setText(QCoreApplication.translate("MainWindow", u"Total Produced Energy Today", None))
         self.totalProducedValue.setText(QCoreApplication.translate("MainWindow", u"10kWh", None))
         self.moneySavedTodayLabel.setText(QCoreApplication.translate("MainWindow", u"Money saved today", None))
@@ -739,10 +758,12 @@ class Ui_MainWindow(object):
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"statistics", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Choose Range:", None))
         self.comboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Last Day", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Last Month", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Last Year", None))
-        self.comboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Lifetime", None))
+        self.comboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"This Month", None))
+        self.comboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Last Month", None))
 
+        self.lastDayGraph.setText("")
+        self.lastMonthGraph.setText("")
+        self.thisMonthGraph.setText("")
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Predictions", None))
         self.predictedGraphName.setText(QCoreApplication.translate("MainWindow", u"Predicted production for next week", None))
         self.predictedProductionLabel.setText(QCoreApplication.translate("MainWindow", u"Predicted Production:", None))

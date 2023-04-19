@@ -784,7 +784,7 @@
           <item>
            <widget class="QStackedWidget" name="mainContent">
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="homePage">
              <widget class="QLabel" name="label_4">
@@ -810,7 +810,7 @@
                </rect>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_11">
-               <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+               <item alignment="Qt::AlignHCenter|Qt::AlignTop">
                 <widget class="QWidget" name="graphWidgetName" native="true">
                  <property name="minimumSize">
                   <size>
@@ -848,12 +848,21 @@
                 </widget>
                </item>
                <item>
-                <widget class="QGraphicsView" name="homeGraph">
+                <widget class="QLabel" name="graphLabelHome">
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
-                   <height>100</height>
+                   <height>320</height>
                   </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>320</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string/>
                  </property>
                 </widget>
                </item>
@@ -1050,17 +1059,12 @@
                     </item>
                     <item>
                      <property name="text">
+                      <string>This Month</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
                       <string>Last Month</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Last Year</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Lifetime</string>
                      </property>
                     </item>
                    </widget>
@@ -1069,7 +1073,53 @@
                 </widget>
                </item>
                <item>
-                <widget class="QGraphicsView" name="graphicsView_2"/>
+                <widget class="QStackedWidget" name="stackedWidetStats">
+                 <widget class="QWidget" name="lastDayPage">
+                  <widget class="QLabel" name="lastDayGraph">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>602</width>
+                     <height>326</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </widget>
+                 <widget class="QWidget" name="lastMonthPage">
+                  <widget class="QLabel" name="lastMonthGraph">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>602</width>
+                     <height>326</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </widget>
+                 <widget class="QWidget" name="thisMonthPage">
+                  <widget class="QLabel" name="thisMonthGraph">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>602</width>
+                     <height>326</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </widget>
+                </widget>
                </item>
               </layout>
              </widget>
