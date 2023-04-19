@@ -9,8 +9,8 @@ przejdź do folderu z Pythonem Python310/Lib/site-packages/qt6_applications/QT/b
 https://www.youtube.com/watch?v=NU3DQwMKz00 tutorial instalacji
 
 ## zadania
-Przykładowa zakładka Predictions:
-![Alt text](/repository/assets/SampleUI.jpg?raw=true "Sample UI")
+Przykładowa strona Predictions:
+![Alt text](https://github.com/ddziechciarz/JPWPApp/blob/Excercise/assets/SampleUI.jpg?raw=true)
 
 
 
