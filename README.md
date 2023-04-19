@@ -33,7 +33,7 @@ plt.plot(time, value, color="dodgerblue")
 plt.savefig('img/charts_today.jpg', format='jpg')
 plt.close()
 ```
-Następnie dodaj wygenerowany wykres do utworzonej przez ciebie zakładki Predictions.
+Następnie dodaj wygenerowany wykres do utworzonej przez ciebie zakładki Predictions. Przykładowa implementacja dodawania wykresu do zakładki Home:
 ```
 pixmapHome = QPixmap('img/charts_today.jpg')
 self.ui.graphLabelHome.setPixmap(pixmapHome)
