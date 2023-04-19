@@ -12,13 +12,13 @@ https://www.youtube.com/watch?v=NU3DQwMKz00 tutorial instalacji
 Wykorzystując biblioteki 'csv' odczytaj dane z pliku 'charts.csv' znajdującego się w folderze 'data', przeykładowa implementacja: 
 ```
 data = []
-    with open('data/basic.csv') as csvfile:
-        reader = csv.reader(csvfile)
-        for row in reader:
-            value = row[0].split(';')
-            data.append(value[1])
+with open('data/basic.csv') as csvfile:
+    reader = csv.reader(csvfile)
+    for row in reader:
+        value = row[0].split(';')
+        data.append(value[1])
 ```
-Następnie przy pomocy modułu 'pyplot' biblioteki 'matplotlib' wygeneruj wykres, który zostanie zapisany w folderze 'img', przykładowa interpretacja, po bardziej rozbudowany kod zaglądnij do pliku charts_read.py
+Następnie przy pomocy modułu 'pyplot' biblioteki 'matplotlib' wygeneruj wykres, który zostanie zapisany w folderze 'img'. Po bardziej rozbudowany kod zaglądnij do pliku charts_read.py, przykładowa implementacja: 
 ```
 plt.figure(figsize=(10, 5))
 plt.plot(time, value, color="dodgerblue")
