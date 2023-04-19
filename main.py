@@ -53,7 +53,6 @@ class MainWindow(QMainWindow):
         self.updateStaticData(charts_read.get_static_data())
 
 
-
     def comboBoxClicked(self):
         currentSelection = self.ui.comboBox.currentText()
         if currentSelection == 'Last Day':
