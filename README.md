@@ -9,7 +9,7 @@ przejdź do folderu z Pythonem Python310/Lib/site-packages/qt6_applications/QT/b
 https://www.youtube.com/watch?v=NU3DQwMKz00 tutorial instalacji
 
 ## zadania
-Postaraj się odtworzyć strone Predictions w aplikacji QtDesigner
+Postaraj się odtworzyć strone Predictions w aplikacji QtDesigner  
 Przykładowa strona Predictions:
 ![Alt text](https://github.com/ddziechciarz/JPWPApp/blob/Excercise/assets/SampleUI.jpg?raw=true)
 ![Alt text](https://github.com/ddziechciarz/JPWPApp/blob/Excercise/assets/SampleProjetTree.jpg?raw=true)
