@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Project1csHCuB.ui'
+## Form generated from reading UI file 'Project1kaDcTM.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -125,6 +125,21 @@ class Ui_MainWindow(object):
 "}\n"
 "#helpLabelsWidget{\n"
 "	background-color: #FFBC42;\n"
+"	border-top-left-radius: 10px;\n"
+"	border-bottom-right-radius: 10px;\n"
+"}\n"
+"#avoidedCO2WidgetStat{\n"
+"	background-color: #8ecae6;\n"
+"	border-top-left-radius: 10px;\n"
+"	border-bottom-right-radius: 10px;\n"
+"}\n"
+"#moneySavedWidgetStat{\n"
+"	background-color: #8ecae6;\n"
+"	border-top-left-radius: 10px;\n"
+"	border-bottom-right-radius: 10px;\n"
+"}\n"
+"#totalProducedStat{\n"
+"	background-color: #8ecae6;\n"
 "	border-top-left-radius: 10px;\n"
 "	border-bottom-right-radius: 10px;\n"
 "}")
@@ -447,7 +462,7 @@ class Ui_MainWindow(object):
 
         self.dataWidget = QWidget(self.homePage)
         self.dataWidget.setObjectName(u"dataWidget")
-        self.dataWidget.setGeometry(QRect(20, 430, 621, 74))
+        self.dataWidget.setGeometry(QRect(20, 410, 621, 74))
         self.horizontalLayout_9 = QHBoxLayout(self.dataWidget)
         self.horizontalLayout_9.setSpacing(30)
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
@@ -585,6 +600,70 @@ class Ui_MainWindow(object):
         self.stackedWidetStats.addWidget(self.thisMonthPage)
 
         self.verticalLayout_12.addWidget(self.stackedWidetStats, 0, Qt.AlignBottom)
+
+        self.statDataWidget = QWidget(self.statisticsPage)
+        self.statDataWidget.setObjectName(u"statDataWidget")
+        self.statDataWidget.setGeometry(QRect(20, 410, 621, 74))
+        self.horizontalLayout_11 = QHBoxLayout(self.statDataWidget)
+        self.horizontalLayout_11.setSpacing(30)
+        self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
+        self.horizontalLayout_11.setContentsMargins(9, -1, -1, -1)
+        self.totalProducedStat = QWidget(self.statDataWidget)
+        self.totalProducedStat.setObjectName(u"totalProducedStat")
+        self.verticalLayout_22 = QVBoxLayout(self.totalProducedStat)
+        self.verticalLayout_22.setObjectName(u"verticalLayout_22")
+        self.totalProducedLabel_2 = QLabel(self.totalProducedStat)
+        self.totalProducedLabel_2.setObjectName(u"totalProducedLabel_2")
+        self.totalProducedLabel_2.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_22.addWidget(self.totalProducedLabel_2)
+
+        self.totalProducedValueStat = QLabel(self.totalProducedStat)
+        self.totalProducedValueStat.setObjectName(u"totalProducedValueStat")
+        self.totalProducedValueStat.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_22.addWidget(self.totalProducedValueStat)
+
+
+        self.horizontalLayout_11.addWidget(self.totalProducedStat)
+
+        self.moneySavedWidgetStat = QWidget(self.statDataWidget)
+        self.moneySavedWidgetStat.setObjectName(u"moneySavedWidgetStat")
+        self.verticalLayout_23 = QVBoxLayout(self.moneySavedWidgetStat)
+        self.verticalLayout_23.setObjectName(u"verticalLayout_23")
+        self.moneySavedTodayLabel_2 = QLabel(self.moneySavedWidgetStat)
+        self.moneySavedTodayLabel_2.setObjectName(u"moneySavedTodayLabel_2")
+        self.moneySavedTodayLabel_2.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_23.addWidget(self.moneySavedTodayLabel_2)
+
+        self.moneySavedValueStat = QLabel(self.moneySavedWidgetStat)
+        self.moneySavedValueStat.setObjectName(u"moneySavedValueStat")
+        self.moneySavedValueStat.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_23.addWidget(self.moneySavedValueStat)
+
+
+        self.horizontalLayout_11.addWidget(self.moneySavedWidgetStat)
+
+        self.avoidedCO2WidgetStat = QWidget(self.statDataWidget)
+        self.avoidedCO2WidgetStat.setObjectName(u"avoidedCO2WidgetStat")
+        self.verticalLayout_24 = QVBoxLayout(self.avoidedCO2WidgetStat)
+        self.verticalLayout_24.setObjectName(u"verticalLayout_24")
+        self.avoidedCO2Label_2 = QLabel(self.avoidedCO2WidgetStat)
+        self.avoidedCO2Label_2.setObjectName(u"avoidedCO2Label_2")
+        self.avoidedCO2Label_2.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_24.addWidget(self.avoidedCO2Label_2)
+
+        self.avoidedCO2ValueStat = QLabel(self.avoidedCO2WidgetStat)
+        self.avoidedCO2ValueStat.setObjectName(u"avoidedCO2ValueStat")
+        self.avoidedCO2ValueStat.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_24.addWidget(self.avoidedCO2ValueStat)
+
+
+        self.horizontalLayout_11.addWidget(self.avoidedCO2WidgetStat)
 
         self.mainContent.addWidget(self.statisticsPage)
         self.predictionsPage = QWidget()
@@ -726,6 +805,12 @@ class Ui_MainWindow(object):
         self.lastDayGraph.setText("")
         self.lastMonthGraph.setText("")
         self.thisMonthGraph.setText("")
+        self.totalProducedLabel_2.setText(QCoreApplication.translate("MainWindow", u"Total Produced Energy Today", None))
+        self.totalProducedValueStat.setText(QCoreApplication.translate("MainWindow", u"10kWh", None))
+        self.moneySavedTodayLabel_2.setText(QCoreApplication.translate("MainWindow", u"Money saved today", None))
+        self.moneySavedValueStat.setText(QCoreApplication.translate("MainWindow", u"50 PLN", None))
+        self.avoidedCO2Label_2.setText(QCoreApplication.translate("MainWindow", u"CO2 Avoided Today", None))
+        self.avoidedCO2ValueStat.setText(QCoreApplication.translate("MainWindow", u"200kg", None))
         self.predictedGraphName.setText(QCoreApplication.translate("MainWindow", u"Predicted production for next week", None))
         self.predictedGraph.setText("")
         self.predictedProductionLabel.setText(QCoreApplication.translate("MainWindow", u"Predicted Production:", None))

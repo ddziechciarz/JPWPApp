@@ -27,6 +27,16 @@ def chart_today_img():
     plt.close()
     return energy
 
+def get_static_data():
+    data = []
+    with open('data/basic.csv') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            value = row[0].split(';')
+            data.append(value[1])
+    return data
+
+
 
 def charts_month_img(month):
     time = []

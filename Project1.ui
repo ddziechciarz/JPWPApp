@@ -114,6 +114,21 @@
 	background-color: #FFBC42;
 	border-top-left-radius: 10px;
 	border-bottom-right-radius: 10px;
+}
+#avoidedCO2WidgetStat{
+	background-color: #8ecae6;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+#moneySavedWidgetStat{
+	background-color: #8ecae6;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+#totalProducedStat{
+	background-color: #8ecae6;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -788,7 +803,7 @@
               <property name="geometry">
                <rect>
                 <x>20</x>
-                <y>430</y>
+                <y>410</y>
                 <width>621</width>
                 <height>74</height>
                </rect>
@@ -1047,6 +1062,102 @@
                    </property>
                   </widget>
                  </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="statDataWidget" native="true">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>410</y>
+                <width>621</width>
+                <height>74</height>
+               </rect>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_11">
+               <property name="spacing">
+                <number>30</number>
+               </property>
+               <property name="leftMargin">
+                <number>9</number>
+               </property>
+               <item>
+                <widget class="QWidget" name="totalProducedStat" native="true">
+                 <layout class="QVBoxLayout" name="verticalLayout_22">
+                  <item>
+                   <widget class="QLabel" name="totalProducedLabel_2">
+                    <property name="text">
+                     <string>Total Produced Energy Today</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="totalProducedValueStat">
+                    <property name="text">
+                     <string>10kWh</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QWidget" name="moneySavedWidgetStat" native="true">
+                 <layout class="QVBoxLayout" name="verticalLayout_23">
+                  <item>
+                   <widget class="QLabel" name="moneySavedTodayLabel_2">
+                    <property name="text">
+                     <string>Money saved today</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="moneySavedValueStat">
+                    <property name="text">
+                     <string>50 PLN</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QWidget" name="avoidedCO2WidgetStat" native="true">
+                 <layout class="QVBoxLayout" name="verticalLayout_24">
+                  <item>
+                   <widget class="QLabel" name="avoidedCO2Label_2">
+                    <property name="text">
+                     <string>CO2 Avoided Today</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="avoidedCO2ValueStat">
+                    <property name="text">
+                     <string>200kg</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                </item>
               </layout>
