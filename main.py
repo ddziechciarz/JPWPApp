@@ -10,17 +10,15 @@ class MainWindow(QMainWindow):
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.setFixedSize(1072, 683)
         self.show()
 
-        self.ui.settingButton.clicked.connect(lambda: self.smallButtonClicked(0))
-        self.ui.infoButton.clicked.connect(lambda: self.smallButtonClicked(2))
-        self.ui.helpButton.clicked.connect(lambda: self.smallButtonClicked(1))
+        self.ui.infoButton.clicked.connect(lambda: self.ui.leftMenuContents.setCurrentIndex(2))
+        self.ui.helpButton.clicked.connect(lambda: self.ui.leftMenuContents.setCurrentIndex(1))
 
         self.ui.homeButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(2))
-        self.ui.statsButton.clicked.connect(lambda: self.statWindowClicked())
+        self.ui.statsButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(0))
         self.ui.predButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(1))
-
-        self.ui.menuButton.clicked.connect(lambda: self.ui.centerLeftMenuSubcontainer.setHidden(not self.ui.centerLeftMenuSubcontainer.isHidden()))
 
         self.ui.comboBox.activated.connect(lambda: self.comboBoxClicked())
 
@@ -46,8 +44,6 @@ class MainWindow(QMainWindow):
         self.ui.predictedGraph.setScaledContents(True)
 
 
-
-
     def comboBoxClicked(self):
         currentSelection = self.ui.comboBox.currentText()
         if currentSelection == 'Last Day':
@@ -56,26 +52,6 @@ class MainWindow(QMainWindow):
             self.ui.stackedWidetStats.setCurrentIndex(2)
         else:
             self.ui.stackedWidetStats.setCurrentIndex(1)
-
-
-    def smallButtonClicked(self, index):
-        if self.ui.leftMenuContents.currentIndex() == index:
-            self.ui.centerLeftMenuSubcontainer.setHidden(not self.ui.centerLeftMenuSubcontainer.isHidden())
-        else:
-            self.ui.centerLeftMenuSubcontainer.setHidden(False)
-        self.ui.leftMenuContents.setCurrentIndex(index)
-
-    def homeWindowClicked(self):
-        self.ui.mainContent.setCurrentIndex(2)
-        self.ui.homeGraph.plotItem
-
-    def statWindowClicked(self):
-        self.ui.mainContent.setCurrentIndex(0)
-        #self.ui.homeGraph
-
-
-
-
 
 if __name__ == "__main__":
     #todayCharts = charts.charts_today()
