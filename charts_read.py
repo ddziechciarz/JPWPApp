@@ -42,10 +42,30 @@ def charts_month_img(month):
     plt.savefig('img/charts_month_' + month + '.jpg', format='jpg')
     plt.close()
 
+def charts_prediction_img():
+    time = []
+    value = []
+    with open('data/energy_prediction.csv') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            split = row[0].split(';')
+            time.append(split[0])
+            value.append(float(split[1]))
+    plt.figure(figsize=(10, 5))
+    plt.bar(time, value, color="dodgerblue", edgecolor="white", width=1, linewidth=5)
+    plt.xlabel('Day')
+    plt.ylabel('Value')
+    plt.title('Predictions')
+    plt.yticks([10, 20, 30, 40], ['10kWh', '20kWh', '30kWh', '40kWh'])
+    plt.grid(axis='y')
+    plt.savefig('img/energy_prediction.jpg', format='jpg')
+    plt.close()
+
 
 def all_img():
     chart_today_img()
     charts_month_img('today')
     charts_month_img('last')
+    charts_prediction_img()
 
 all_img()
