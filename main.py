@@ -1,10 +1,6 @@
 import os
 import sys
-import PyQt6
-
-from PySide6.QtGui import QPainter
-from pyqtgraph import PlotWidget, plot
-import pyqtgraph as pg
+from pip._internal.operations.freeze import freeze
 
 from Project1 import *
 import charts_read
@@ -50,8 +46,11 @@ class MainWindow(QMainWindow):
 
 if __name__ == "__main__":
     #todayCharts = charts.charts_today()
+    for requirement in freeze(local_only=True):
+        print(requirement)
+    charts_read.chart_today_img()
     app = QApplication(sys.argv)
     window = MainWindow()
     window.show()
     sys.exit(app.exec())
-    charts_read.chart_today_img()
+
