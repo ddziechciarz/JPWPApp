@@ -64,10 +64,6 @@ class MainWindow(QMainWindow):
         self.ui.moneySavedValue.setText(str(round(energy * 0.77,2)) + " PLN")
         self.ui.avoidedCO2Value.setText(str(round(energy * 0.452,2)) + " kg")
 
-    def updatePredictionStats(self, energy):
-        self.ui.predictedProductionValue.setText(str(energy) + "kWh")
-        self.ui.predictedSavingsValue.setText(str(round(energy * 0.77,2)) + " PLN")
-
     def updateStats(self, energy):
         self.ui.totalProducedValueStat.setText(str(energy) + "kWh")
         self.ui.moneySavedValueStat.setText(str(round(energy * 0.77, 2)) + " PLN")
