@@ -1050,7 +1050,7 @@
                   <item>
                    <widget class="QLabel" name="totalProducedLabel_2">
                     <property name="text">
-                     <string>Total Produced Energy Today</string>
+                     <string>Total Produced Energy</string>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
@@ -1076,7 +1076,7 @@
                   <item>
                    <widget class="QLabel" name="moneySavedTodayLabel_2">
                     <property name="text">
-                     <string>Money saved today</string>
+                     <string>Money saved</string>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
@@ -1102,7 +1102,7 @@
                   <item>
                    <widget class="QLabel" name="avoidedCO2Label_2">
                     <property name="text">
-                     <string>CO2 Avoided Today</string>
+                     <string>CO2 Avoided</string>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
