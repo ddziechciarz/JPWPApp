@@ -21,7 +21,7 @@ Następnie dodaj funkcję przełączania do zakładki Predictions do odpowiednie
 ```
 self.ui.infoButton.clicked.connect(lambda: self.ui.leftMenuContents.setCurrentIndex(0))
 ```
-Wykorzystując biblioteki 'csv' odczytaj dane z pliku 'charts.csv' znajdującego się w folderze 'data', przeykładowa implementacja: 
+Wykorzystując biblioteki 'csv' odczytaj dane z pliku 'exercise.csv' znajdującego się w folderze 'data', przeykładowa implementacja: 
 
 ```
 data = []
