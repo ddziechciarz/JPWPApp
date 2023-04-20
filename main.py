@@ -13,8 +13,8 @@ class MainWindow(QMainWindow):
         self.setFixedSize(1072, 683)
         self.show()
 
-        self.ui.infoButton.clicked.connect(lambda: self.ui.leftMenuContents.setCurrentIndex(0))
-        self.ui.helpButton.clicked.connect(lambda: self.ui.leftMenuContents.setCurrentIndex(1))
+        self.ui.infoButton.clicked.connect(lambda: self.ui.leftMenuContents.setCurrentIndex(1))
+        self.ui.helpButton.clicked.connect(lambda: self.ui.leftMenuContents.setCurrentIndex(0))
 
         self.ui.homeButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(0))
         self.ui.statsButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(1))
