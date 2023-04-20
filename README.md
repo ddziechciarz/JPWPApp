@@ -17,7 +17,12 @@ Postaraj się odtworzyć strone Predictions w aplikacji QtDesigner, przykładowa
 
 
 
+Następnie dodaj funkcję przełączania do zakładki Predictions do odpowiedniego przycisku, np:
+```
+
 Wykorzystując biblioteki 'csv' odczytaj dane z pliku 'charts.csv' znajdującego się w folderze 'data', przeykładowa implementacja: 
+```
+self.ui.infoButton.clicked.connect(lambda: self.ui.leftMenuContents.setCurrentIndex(0))
 ```
 data = []
 with open('data/basic.csv') as csvfile:
