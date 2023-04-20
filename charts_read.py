@@ -27,6 +27,7 @@ def chart_today_img():
     plt.close()
     return energy
 
+
 def get_static_data():
     data = []
     with open('data/basic.csv') as csvfile:
@@ -35,7 +36,6 @@ def get_static_data():
             value = row[0].split(';')
             data.append(value[1])
     return data
-
 
 
 def charts_month_img(month):
@@ -121,11 +121,10 @@ def all_img():
     charts_month_img('today')
     charts_month_img('last')
     charts_prediction_img()
-    #print(get_sum_energy_today())
-    #print(get_sum_energy_prediction())
-    #print(get_sum_energy_today_month())
-    #print(get_sum_energy_last_month())
-
+    # print(get_sum_energy_today())
+    # print(get_sum_energy_prediction())
+    # print(get_sum_energy_today_month())
+    # print(get_sum_energy_last_month())
 
 
 all_img()

@@ -49,14 +49,14 @@ def energy_prediction():
     f = open('data/energy_prediction.csv', mode='w')
     for x in range(2, 9):
         url = "https://www.accuweather.com/pl/pl/wojnarowa/274421/daily-weather-forecast/274421?day=" + str(x)
-        cloudiness = int(wheather_next(url, str(x))) / 100
+        cloudiness = int(weather_next(url, str(x))) / 100
         day += 1
         value = average * month_percent[month - 1] + average * (1 - cloudiness)
         f.write(str(day) + ";" + str(value) + '\n')
     f.close()
 
 
-def wheather_today(url):
+def weather_today(url):
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
 
     soup = BeautifulSoup(response.text, "html.parser")
@@ -95,7 +95,7 @@ def wheather_today(url):
     f.close()
 
 
-def wheather_next(url, day):
+def weather_next(url, day):
     response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
 
     soup = BeautifulSoup(response.text, "html.parser")
