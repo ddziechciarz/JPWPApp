@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Project1VEdPQv.ui'
+## Form generated from reading UI file 'Project1gCMwrB.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -183,13 +183,23 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setSpacing(0)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.verticalLayout_4.setContentsMargins(0, 10, 0, 10)
+        self.homeButton = QPushButton(self.frame_2)
+        self.homeButton.setObjectName(u"homeButton")
+        self.homeButton.setMinimumSize(QSize(0, 60))
+        self.homeButton.setStyleSheet(u"")
+        icon = QIcon()
+        icon.addFile(u":/icons/icons/home.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.homeButton.setIcon(icon)
+        self.homeButton.setIconSize(QSize(32, 32))
+
+        self.verticalLayout_4.addWidget(self.homeButton)
+
         self.statsButton = QPushButton(self.frame_2)
         self.statsButton.setObjectName(u"statsButton")
         self.statsButton.setMinimumSize(QSize(0, 60))
-        self.statsButton.setStyleSheet(u"")
-        icon = QIcon()
-        icon.addFile(u":/icons/icons/home.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.statsButton.setIcon(icon)
+        icon1 = QIcon()
+        icon1.addFile(u":/icons/icons/data.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.statsButton.setIcon(icon1)
         self.statsButton.setIconSize(QSize(32, 32))
 
         self.verticalLayout_4.addWidget(self.statsButton)
@@ -197,22 +207,12 @@ class Ui_MainWindow(object):
         self.predButton = QPushButton(self.frame_2)
         self.predButton.setObjectName(u"predButton")
         self.predButton.setMinimumSize(QSize(0, 60))
-        icon1 = QIcon()
-        icon1.addFile(u":/icons/icons/data.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.predButton.setIcon(icon1)
+        icon2 = QIcon()
+        icon2.addFile(u":/icons/icons/prediction.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.predButton.setIcon(icon2)
         self.predButton.setIconSize(QSize(32, 32))
 
         self.verticalLayout_4.addWidget(self.predButton)
-
-        self.homeButton = QPushButton(self.frame_2)
-        self.homeButton.setObjectName(u"homeButton")
-        self.homeButton.setMinimumSize(QSize(0, 60))
-        icon2 = QIcon()
-        icon2.addFile(u":/icons/icons/prediction.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.homeButton.setIcon(icon2)
-        self.homeButton.setIconSize(QSize(32, 32))
-
-        self.verticalLayout_4.addWidget(self.homeButton)
 
 
         self.verticalLayout_2.addWidget(self.frame_2, 0, Qt.AlignTop)
@@ -288,7 +288,7 @@ class Ui_MainWindow(object):
         self.closeButton.setIcon(icon5)
         self.closeButton.setIconSize(QSize(24, 24))
 
-        self.horizontalLayout_4.addWidget(self.closeButton, 0, Qt.AlignRight)
+        self.horizontalLayout_4.addWidget(self.closeButton)
 
 
         self.verticalLayout_8.addWidget(self.centerLeftMenuBar)
@@ -656,78 +656,6 @@ class Ui_MainWindow(object):
         self.mainContent.addWidget(self.statisticsPage)
         self.predictionsPage = QWidget()
         self.predictionsPage.setObjectName(u"predictionsPage")
-        self.graphWidget_2 = QWidget(self.predictionsPage)
-        self.graphWidget_2.setObjectName(u"graphWidget_2")
-        self.graphWidget_2.setEnabled(True)
-        self.graphWidget_2.setGeometry(QRect(20, 30, 620, 380))
-        self.verticalLayout_13 = QVBoxLayout(self.graphWidget_2)
-        self.verticalLayout_13.setObjectName(u"verticalLayout_13")
-        self.graphWidgetName_2 = QWidget(self.graphWidget_2)
-        self.graphWidgetName_2.setObjectName(u"graphWidgetName_2")
-        self.graphWidgetName_2.setMinimumSize(QSize(200, 20))
-        self.graphWidgetName_2.setMaximumSize(QSize(200, 30))
-        self.horizontalLayout_10 = QHBoxLayout(self.graphWidgetName_2)
-        self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
-        self.horizontalLayout_10.setContentsMargins(0, 9, 0, 9)
-        self.predictedGraphName = QLabel(self.graphWidgetName_2)
-        self.predictedGraphName.setObjectName(u"predictedGraphName")
-        self.predictedGraphName.setMinimumSize(QSize(200, 0))
-        self.predictedGraphName.setAlignment(Qt.AlignCenter)
-
-        self.horizontalLayout_10.addWidget(self.predictedGraphName, 0, Qt.AlignHCenter|Qt.AlignTop)
-
-
-        self.verticalLayout_13.addWidget(self.graphWidgetName_2, 0, Qt.AlignHCenter|Qt.AlignTop)
-
-        self.predictedGraph = QLabel(self.graphWidget_2)
-        self.predictedGraph.setObjectName(u"predictedGraph")
-        self.predictedGraph.setMinimumSize(QSize(0, 320))
-        self.predictedGraph.setMaximumSize(QSize(16777215, 320))
-
-        self.verticalLayout_13.addWidget(self.predictedGraph, 0, Qt.AlignBottom)
-
-        self.predictionsDataWidget = QWidget(self.predictionsPage)
-        self.predictionsDataWidget.setObjectName(u"predictionsDataWidget")
-        self.predictionsDataWidget.setGeometry(QRect(20, 430, 620, 74))
-        self.predictionsDataWidget.setMinimumSize(QSize(0, 70))
-        self.horizontalLayout_7 = QHBoxLayout(self.predictionsDataWidget)
-        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
-        self.predictedProductionWidget = QWidget(self.predictionsDataWidget)
-        self.predictedProductionWidget.setObjectName(u"predictedProductionWidget")
-        self.predictedProductionWidget.setMaximumSize(QSize(200, 16777215))
-        self.verticalLayout_14 = QVBoxLayout(self.predictedProductionWidget)
-        self.verticalLayout_14.setObjectName(u"verticalLayout_14")
-        self.predictedProductionLabel = QLabel(self.predictedProductionWidget)
-        self.predictedProductionLabel.setObjectName(u"predictedProductionLabel")
-
-        self.verticalLayout_14.addWidget(self.predictedProductionLabel, 0, Qt.AlignHCenter)
-
-        self.predictedProductionValue = QLabel(self.predictedProductionWidget)
-        self.predictedProductionValue.setObjectName(u"predictedProductionValue")
-
-        self.verticalLayout_14.addWidget(self.predictedProductionValue, 0, Qt.AlignHCenter)
-
-
-        self.horizontalLayout_7.addWidget(self.predictedProductionWidget)
-
-        self.predictedSavingsWidget = QWidget(self.predictionsDataWidget)
-        self.predictedSavingsWidget.setObjectName(u"predictedSavingsWidget")
-        self.predictedSavingsWidget.setMaximumSize(QSize(200, 16777215))
-        self.verticalLayout_15 = QVBoxLayout(self.predictedSavingsWidget)
-        self.verticalLayout_15.setObjectName(u"verticalLayout_15")
-        self.predictedSavingsLabel = QLabel(self.predictedSavingsWidget)
-        self.predictedSavingsLabel.setObjectName(u"predictedSavingsLabel")
-
-        self.verticalLayout_15.addWidget(self.predictedSavingsLabel, 0, Qt.AlignHCenter)
-
-        self.predictedSavingsValue = QLabel(self.predictedSavingsWidget)
-        self.predictedSavingsValue.setObjectName(u"predictedSavingsValue")
-
-        self.verticalLayout_15.addWidget(self.predictedSavingsValue, 0, Qt.AlignHCenter)
-
-
-        self.horizontalLayout_7.addWidget(self.predictedSavingsWidget)
-
         self.mainContent.addWidget(self.predictionsPage)
 
         self.verticalLayout_7.addWidget(self.mainContent)
@@ -743,7 +671,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.leftMenuContents.setCurrentIndex(0)
-        self.mainContent.setCurrentIndex(0)
+        self.mainContent.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -752,14 +680,14 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
 #if QT_CONFIG(tooltip)
-        self.statsButton.setToolTip(QCoreApplication.translate("MainWindow", u"Home", None))
+        self.homeButton.setToolTip(QCoreApplication.translate("MainWindow", u"Home", None))
 #endif // QT_CONFIG(tooltip)
-        self.statsButton.setText(QCoreApplication.translate("MainWindow", u"   Home", None))
+        self.homeButton.setText(QCoreApplication.translate("MainWindow", u"   Home", None))
 #if QT_CONFIG(tooltip)
-        self.predButton.setToolTip(QCoreApplication.translate("MainWindow", u"Statistics", None))
+        self.statsButton.setToolTip(QCoreApplication.translate("MainWindow", u"Statistics", None))
 #endif // QT_CONFIG(tooltip)
-        self.predButton.setText(QCoreApplication.translate("MainWindow", u"    Statistics", None))
-        self.homeButton.setText(QCoreApplication.translate("MainWindow", u"Predictions", None))
+        self.statsButton.setText(QCoreApplication.translate("MainWindow", u"    Statistics", None))
+        self.predButton.setText(QCoreApplication.translate("MainWindow", u"Predictions", None))
 #if QT_CONFIG(tooltip)
         self.infoButton.setToolTip(QCoreApplication.translate("MainWindow", u"Information", None))
 #endif // QT_CONFIG(tooltip)
@@ -797,11 +725,5 @@ class Ui_MainWindow(object):
         self.moneySavedValueStat.setText(QCoreApplication.translate("MainWindow", u"50 PLN", None))
         self.avoidedCO2Label_2.setText(QCoreApplication.translate("MainWindow", u"CO2 Avoided Today", None))
         self.avoidedCO2ValueStat.setText(QCoreApplication.translate("MainWindow", u"200kg", None))
-        self.predictedGraphName.setText(QCoreApplication.translate("MainWindow", u"Predicted production for next week", None))
-        self.predictedGraph.setText("")
-        self.predictedProductionLabel.setText(QCoreApplication.translate("MainWindow", u"Predicted Production:", None))
-        self.predictedProductionValue.setText(QCoreApplication.translate("MainWindow", u"10 kWh", None))
-        self.predictedSavingsLabel.setText(QCoreApplication.translate("MainWindow", u"Predicted Savings:", None))
-        self.predictedSavingsValue.setText(QCoreApplication.translate("MainWindow", u"10 PLN", None))
     # retranslateUi
 

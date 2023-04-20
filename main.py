@@ -13,23 +13,21 @@ class MainWindow(QMainWindow):
         self.setFixedSize(1072, 683)
         self.show()
 
-        self.ui.infoButton.clicked.connect(lambda: self.ui.leftMenuContents.setCurrentIndex(2))
+        self.ui.infoButton.clicked.connect(lambda: self.ui.leftMenuContents.setCurrentIndex(0))
         self.ui.helpButton.clicked.connect(lambda: self.ui.leftMenuContents.setCurrentIndex(1))
 
-        self.ui.homeButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(2))
-        self.ui.statsButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(0))
-        self.ui.predButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(1))
+        self.ui.homeButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(0))
+        self.ui.statsButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(1))
 
         self.ui.comboBox.activated.connect(lambda: self.comboBoxClicked())
 
         pixmapHome = QPixmap('img/charts_today.jpg')
+        self.ui.graphLabelHome.setPixmap(pixmapHome)
+        self.ui.graphLabelHome.setScaledContents(True)
+
         pixmapStatToday = QPixmap('img/charts_today.jpg')
         pixmapStatLastMonth = QPixmap('img/charts_month_last.jpg')
         pixmapStatThisMonth = QPixmap('img/charts_month_today.jpg')
-        pixmapPrediction = QPixmap('img/energy_prediction.jpg')
-
-        self.ui.graphLabelHome.setPixmap(pixmapHome)
-        self.ui.graphLabelHome.setScaledContents(True)
 
         self.ui.lastDayGraph.setPixmap(pixmapStatToday)
         self.ui.lastDayGraph.setScaledContents(True)
@@ -40,16 +38,12 @@ class MainWindow(QMainWindow):
         self.ui.thisMonthGraph.setPixmap(pixmapStatThisMonth)
         self.ui.thisMonthGraph.setScaledContents(True)
 
-        self.ui.predictedGraph.setPixmap(pixmapPrediction)
-        self.ui.predictedGraph.setScaledContents(True)
-
         self.todayTotalEnergy = charts_read.get_sum_energy_today()
         self.thisMonthTotalEnergy = charts_read.get_sum_energy_today_month()
         self.lastMonthTotalEnergy = charts_read.get_sum_energy_last_month()
         self.predictedTotalEnergy = charts_read.get_sum_energy_prediction()
 
         self.updateHomeStats(self.todayTotalEnergy)
-        self.updatePredictionStats(self.predictedTotalEnergy)
         self.updateStaticData(charts_read.get_static_data())
 
 
