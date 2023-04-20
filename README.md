@@ -19,10 +19,10 @@ Postaraj się odtworzyć strone Predictions w aplikacji QtDesigner, przykładowa
 
 Następnie dodaj funkcję przełączania do zakładki Predictions do odpowiedniego przycisku, np:
 ```
-
-Wykorzystując biblioteki 'csv' odczytaj dane z pliku 'charts.csv' znajdującego się w folderze 'data', przeykładowa implementacja: 
-```
 self.ui.infoButton.clicked.connect(lambda: self.ui.leftMenuContents.setCurrentIndex(0))
+```
+Wykorzystując biblioteki 'csv' odczytaj dane z pliku 'charts.csv' znajdującego się w folderze 'data', przeykładowa implementacja: 
+
 ```
 data = []
 with open('data/basic.csv') as csvfile:
@@ -43,4 +43,11 @@ Następnie dodaj wygenerowany wykres do utworzonej przez ciebie zakładki Predic
 pixmapHome = QPixmap('img/charts_today.jpg')
 self.ui.graphLabelHome.setPixmap(pixmapHome)
 self.ui.graphLabelHome.setScaledContents(True)
+```
+Potem pobierz dane o przewidywanej wyprodukowanej energii i za ich pomocą uzupełnij pola przewidywanej produkcji i przewidywanej oszczędności, np:
+```
+def updateHomeStats(self, energy):
+    self.ui.totalProducedValue.setText(str(energy) + "kWh")
+    self.ui.moneySavedValue.setText(str(round(energy * 0.77,2)) + " PLN")
+    self.ui.avoidedCO2Value.setText(str(round(energy * 0.452,2)) + " kg")
 ```
