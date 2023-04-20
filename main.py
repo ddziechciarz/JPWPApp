@@ -51,6 +51,7 @@ class MainWindow(QMainWindow):
         self.updateHomeStats(self.todayTotalEnergy)
         self.updatePredictionStats(self.predictedTotalEnergy)
         self.updateStaticData(charts_read.get_static_data())
+        self.comboBoxClicked()
 
 
 

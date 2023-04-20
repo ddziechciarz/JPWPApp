@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Project1ESxFrj.ui'
+## Form generated from reading UI file 'Project1BTLviV.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -19,7 +19,6 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
     QLabel, QMainWindow, QPushButton, QSizePolicy,
     QSpacerItem, QStackedWidget, QVBoxLayout, QWidget)
 import resources_rc
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -792,11 +791,11 @@ class Ui_MainWindow(object):
         self.lastDayGraph.setText("")
         self.lastMonthGraph.setText("")
         self.thisMonthGraph.setText("")
-        self.totalProducedLabel_2.setText(QCoreApplication.translate("MainWindow", u"Total Produced Energy Today", None))
+        self.totalProducedLabel_2.setText(QCoreApplication.translate("MainWindow", u"Total Produced Energy", None))
         self.totalProducedValueStat.setText(QCoreApplication.translate("MainWindow", u"10kWh", None))
-        self.moneySavedTodayLabel_2.setText(QCoreApplication.translate("MainWindow", u"Money saved today", None))
+        self.moneySavedTodayLabel_2.setText(QCoreApplication.translate("MainWindow", u"Money saved", None))
         self.moneySavedValueStat.setText(QCoreApplication.translate("MainWindow", u"50 PLN", None))
-        self.avoidedCO2Label_2.setText(QCoreApplication.translate("MainWindow", u"CO2 Avoided Today", None))
+        self.avoidedCO2Label_2.setText(QCoreApplication.translate("MainWindow", u"CO2 Avoided", None))
         self.avoidedCO2ValueStat.setText(QCoreApplication.translate("MainWindow", u"200kg", None))
         self.predictedGraphName.setText(QCoreApplication.translate("MainWindow", u"Predicted production for next week", None))
         self.predictedGraph.setText("")
