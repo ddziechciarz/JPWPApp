@@ -8,7 +8,15 @@ pip instal pyqt6-tools
 przejdź do folderu z Pythonem Python310/Lib/site-packages/qt6_applications/QT/bin i otwórz aplikację designer  
 https://www.youtube.com/watch?v=NU3DQwMKz00 tutorial instalacji
 
-## zadania
+## Zadania
+Postaraj się odtworzyć strone Predictions w aplikacji QtDesigner, przykładowa strona Predictions:
+![Alt text](https://github.com/ddziechciarz/JPWPApp/blob/Excercise/assets/SampleUI.jpg?raw=true)
+![Alt text](https://github.com/ddziechciarz/JPWPApp/blob/Excercise/assets/SampleProjetTree.jpg?raw=true)
+
+
+
+
+
 Wykorzystując biblioteki 'csv' odczytaj dane z pliku 'charts.csv' znajdującego się w folderze 'data', przeykładowa implementacja: 
 ```
 data = []
@@ -24,4 +32,10 @@ plt.figure(figsize=(10, 5))
 plt.plot(time, value, color="dodgerblue")
 plt.savefig('img/charts_today.jpg', format='jpg')
 plt.close()
+```
+Następnie dodaj wygenerowany wykres do utworzonej przez ciebie zakładki Predictions. Przykładowa implementacja dodawania wykresu do zakładki Home:
+```
+pixmapHome = QPixmap('img/charts_today.jpg')
+self.ui.graphLabelHome.setPixmap(pixmapHome)
+self.ui.graphLabelHome.setScaledContents(True)
 ```
