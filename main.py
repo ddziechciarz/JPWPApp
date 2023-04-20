@@ -13,12 +13,12 @@ class MainWindow(QMainWindow):
         self.setFixedSize(1072, 683)
         self.show()
 
-        self.ui.infoButton.clicked.connect(lambda: self.ui.leftMenuContents.setCurrentIndex(2))
+        self.ui.infoButton.clicked.connect(lambda: self.ui.leftMenuContents.setCurrentIndex(0))
         self.ui.helpButton.clicked.connect(lambda: self.ui.leftMenuContents.setCurrentIndex(1))
 
-        self.ui.homeButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(2))
-        self.ui.statsButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(0))
-        self.ui.predButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(1))
+        self.ui.homeButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(0))
+        self.ui.statsButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(1))
+        self.ui.predButton.clicked.connect(lambda: self.ui.mainContent.setCurrentIndex(2))
 
         self.ui.comboBox.activated.connect(lambda: self.comboBoxClicked())
 

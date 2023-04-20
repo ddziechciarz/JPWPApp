@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'Project1VEdPQv.ui'
+## Form generated from reading UI file 'Project1ESxFrj.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -183,13 +183,23 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setSpacing(0)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.verticalLayout_4.setContentsMargins(0, 10, 0, 10)
+        self.homeButton = QPushButton(self.frame_2)
+        self.homeButton.setObjectName(u"homeButton")
+        self.homeButton.setMinimumSize(QSize(0, 60))
+        self.homeButton.setStyleSheet(u"")
+        icon = QIcon()
+        icon.addFile(u":/icons/icons/home.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.homeButton.setIcon(icon)
+        self.homeButton.setIconSize(QSize(32, 32))
+
+        self.verticalLayout_4.addWidget(self.homeButton)
+
         self.statsButton = QPushButton(self.frame_2)
         self.statsButton.setObjectName(u"statsButton")
         self.statsButton.setMinimumSize(QSize(0, 60))
-        self.statsButton.setStyleSheet(u"")
-        icon = QIcon()
-        icon.addFile(u":/icons/icons/home.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.statsButton.setIcon(icon)
+        icon1 = QIcon()
+        icon1.addFile(u":/icons/icons/data.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.statsButton.setIcon(icon1)
         self.statsButton.setIconSize(QSize(32, 32))
 
         self.verticalLayout_4.addWidget(self.statsButton)
@@ -197,22 +207,12 @@ class Ui_MainWindow(object):
         self.predButton = QPushButton(self.frame_2)
         self.predButton.setObjectName(u"predButton")
         self.predButton.setMinimumSize(QSize(0, 60))
-        icon1 = QIcon()
-        icon1.addFile(u":/icons/icons/data.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.predButton.setIcon(icon1)
+        icon2 = QIcon()
+        icon2.addFile(u":/icons/icons/prediction.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.predButton.setIcon(icon2)
         self.predButton.setIconSize(QSize(32, 32))
 
         self.verticalLayout_4.addWidget(self.predButton)
-
-        self.homeButton = QPushButton(self.frame_2)
-        self.homeButton.setObjectName(u"homeButton")
-        self.homeButton.setMinimumSize(QSize(0, 60))
-        icon2 = QIcon()
-        icon2.addFile(u":/icons/icons/prediction.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.homeButton.setIcon(icon2)
-        self.homeButton.setIconSize(QSize(32, 32))
-
-        self.verticalLayout_4.addWidget(self.homeButton)
 
 
         self.verticalLayout_2.addWidget(self.frame_2, 0, Qt.AlignTop)
@@ -743,7 +743,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.leftMenuContents.setCurrentIndex(0)
-        self.mainContent.setCurrentIndex(0)
+        self.mainContent.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -752,14 +752,14 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
 #if QT_CONFIG(tooltip)
-        self.statsButton.setToolTip(QCoreApplication.translate("MainWindow", u"Home", None))
+        self.homeButton.setToolTip(QCoreApplication.translate("MainWindow", u"Home", None))
 #endif // QT_CONFIG(tooltip)
-        self.statsButton.setText(QCoreApplication.translate("MainWindow", u"   Home", None))
+        self.homeButton.setText(QCoreApplication.translate("MainWindow", u"   Home", None))
 #if QT_CONFIG(tooltip)
-        self.predButton.setToolTip(QCoreApplication.translate("MainWindow", u"Statistics", None))
+        self.statsButton.setToolTip(QCoreApplication.translate("MainWindow", u"Statistics", None))
 #endif // QT_CONFIG(tooltip)
-        self.predButton.setText(QCoreApplication.translate("MainWindow", u"    Statistics", None))
-        self.homeButton.setText(QCoreApplication.translate("MainWindow", u"Predictions", None))
+        self.statsButton.setText(QCoreApplication.translate("MainWindow", u"    Statistics", None))
+        self.predButton.setText(QCoreApplication.translate("MainWindow", u"Predictions", None))
 #if QT_CONFIG(tooltip)
         self.infoButton.setToolTip(QCoreApplication.translate("MainWindow", u"Information", None))
 #endif // QT_CONFIG(tooltip)
